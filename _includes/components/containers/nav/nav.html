@@ -5,7 +5,7 @@
     <ul>
         <li><a {% if page.title contains "About" %}class="active"{% endif %} href="{{site.baseurl}}/">About</a></li>
         <!-- <li><a {% if page.title contains "Work" %}class="active"{% endif %} href="{{ site.baseurl}}/work">Work</a></li> -->
-        <li><a href="https://work.diogorusso.com" aria-label="Work">Work</a></li>
+        <li><a href="https://work.diogorusso.com" aria-label="Work" {% if page.title contains "Work" %}class="active"{% endif %}>Work</a></li>
         <li><a href="https://www.linkedin.com/in/diogorusso/?locale=en_US" target="_blank" rel="noopener" aria-label="Linkedin">{% include img/svg/social/linkedin-box.svg %}</a></li>
     </ul>
 </nav>
