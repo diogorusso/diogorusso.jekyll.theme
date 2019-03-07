@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     
 
-    $('.card-slider').slick({
+    $('.card-large-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
