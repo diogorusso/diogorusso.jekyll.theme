@@ -1,11 +1,20 @@
-var numSlick = 0;
-$('.slider-products').each( function() {
-  numSlick++;
-  $(this).addClass( 'slider-' + numSlick ).slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav.slider-' + numSlick
-  });
+$(function () {
+    
+    var $arrows = $('.arrows');
+    var $next = $arrows.children(".slick-next");    
+    var $prev = $arrows.children(".slick-prev");
+    
+    var slick = $('.your-class').slick({
+        appendArrows: $arrows
+    });
+
+    $('.slick-next').on('click', function (e) {
+        var i = $next.index( this )
+        slick.eq(i).slickNext();
+    });
+    $('.slick-prev').on('click', function (e) {
+        var i = $prev.index( this )
+        slick.eq(i).slickPrev();
+    });
+
 });
