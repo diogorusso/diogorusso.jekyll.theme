@@ -25,14 +25,22 @@
         }
     }
 
-    $grayscale:100%;
+
+}
+
+.more-projects{
+    text-align: center;
+}
+
+
+$grayscale:100%;
     $color:0;
     $no-blur:0;
     $blur:100%;
     $saturation:100%;
     $no-saturation:0;
 
-    img{
+    .desaturated{
         -webkit-filter: grayscale($grayscale) blur($no-blur) saturate($saturation);
         filter: grayscale($grayscale) blur($no-blur) saturate($saturation);
 
@@ -41,12 +49,7 @@
         -o-transition:all 0.3s;
         transition:all 0.3s;
     }
-    img:hover{
+    .desaturated:hover{
         -webkit-filter: grayscale($color) blur($no-blur) saturate($saturation);
         filter: grayscale($color) blur($no-blur) saturate($saturation);
     }
-}
-
-.more-projects{
-    text-align: center;
-}

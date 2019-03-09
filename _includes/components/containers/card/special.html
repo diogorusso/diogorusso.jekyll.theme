@@ -1,0 +1,73 @@
+{% capture col_image %}
+  <div class="col-xs-12 col-md-8">
+     <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
+  </div>
+{% endcapture %}
+
+<style>
+  .floating-wrapper-left{
+    margin-right:-20%;
+  }
+
+  .floating-wrapper-right{
+    margin-left:-20%;
+    
+  }
+  .floating-content{
+    padding: 2rem 4rem;
+  }
+  @media only screen and (max-width: 991px) {
+  
+    .floating-content{
+      margin:-3rem auto auto;
+      padding:1rem;
+    }
+    .floating-wrapper-left{
+    margin-right:0;
+  }
+
+  .floating-wrapper-right{
+    margin-left:0;
+  }
+  }
+</style>
+
+{%capture col_content %}
+  {% if include.align == "right" %}
+    <div class="col-xs-10 col-md-4 center-xs start-md  col-xs-offset-1 col-md-offset-0" style="z-index:99">
+      <div class="floating-wrapper-right">
+  {% else %}
+    <div class="col-xs-10 col-md-4 center-xs start-md last-xs first-md col-xs-offset-1 col-md-offset-0" style="z-index:99">
+      <div class="floating-wrapper-left">
+    {% endif %}
+      <div class="card floating-content">
+        <h2 style="font-weight:500">{{ include.title }}</h2>
+        {% if include.categories != %}
+          <p class="author">
+            <span class="date">{{ include.categories }}</span>
+          </p>
+        {% endif%}
+        {% if include.description != %}
+          <div class="content">
+            {{ include.description }}
+          </div>
+        {% endif%}
+        {% if include.url != %}
+          <a class="button" href="{{ site.baseurl }}{{ include.url }}">
+            Read More
+          </a>
+        {% endif%}
+      </div>
+    </div>
+  </div>
+{% endcapture %}
+
+<div class="row middle-sm between-sm" style="margin-bottom:8rem;">
+  {% if include.align == "right" %}
+    {{ col_image }}
+    {{ col_content }}
+  {% else %}
+    {{ col_content }}
+    {{ col_image }}
+  {% endif %}  
+</div>

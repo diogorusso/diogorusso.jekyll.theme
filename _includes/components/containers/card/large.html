@@ -1,27 +1,62 @@
-<div class="row middle-sm between-sm" style="margin-bottom:8rem;">
-    <div class="col-xs-12 col-sm-3">
-      <h2 style="font-weight:500">{{ include.title }}</h2>
-      <p class="author">
-        <span class="date">{{ include.categories }}</span>
-      </p>
-      <div class="content">
-        {{ include.description }}
-      </div>
-      <a href="{{ site.baseurl }}{{ include.url }}" class="button" style="margin: 2rem 0;padding: 1rem 3rem; font-size:1rem; text-decoration:none; color:white;background:black;">Read More</a>
-    </div>
-    <div class="col-xs-12 col-sm-8">
-            <div class="card-large-slider">
-                    <div>
-                        <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
-                    </div>
-                    <div>
-                            <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
-                    </div>
-                    <div>
-                            <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
-                    </div>
-                </div>
-                
-       
-    </div>
+
+{% capture image_single %}
+    <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
+{% endcapture %}
+
+{% capture count %}{{include.count|default:3}}{% endcapture %}
+
+
+{% capture image_slider %}
+  <div class="card-large-slider">
+      {% for num in (1..count) %}
+          <div>
+              <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
+          </div>
+      {% endfor %}
   </div>
+{% endcapture %}
+
+{% capture col_image %}
+  <div class="col-xs-12 col-sm-8">
+     {% if include.type == "slider" %}
+        {{ image_slider}}
+      {% else %}
+        {{ image_single }}
+     {% endif %}  
+  </div>
+{% endcapture %}
+
+{%capture col_content %}
+  {% if include.align == "right" %}
+    <div class="col-xs-12 col-sm-3 first-xs last-sm">
+  {% else %}
+    <div class="col-xs-12 col-sm-3">
+  {% endif %}
+      <h2 style="font-weight:500">{{ include.title }}</h2>
+      {% if include.categories != %}
+        <p class="author">
+          <span class="date">{{ include.categories }}</span>
+        </p>
+      {% endif%}
+      {% if include.description != %}
+        <div class="content">
+          {{ include.description }}
+        </div>
+      {% endif%}
+      {% if include.url != %}
+        <a href="{{ site.baseurl }}{{ include.url }}" class="button" style="margin: 2rem 0;padding: 1rem 3rem; font-size:1rem; text-decoration:none; color:white;background:black;">
+          Read More
+        </a>
+      {% endif%}
+  </div>
+{% endcapture %}
+
+<div class="row middle-sm between-sm" style="margin-bottom:8rem;">
+  {% if include.align == "right" %}
+    {{ col_image }}
+    {{ col_content }}
+  {% else %}
+    {{ col_content }}
+    {{ col_image }}
+  {% endif %}  
+</div>

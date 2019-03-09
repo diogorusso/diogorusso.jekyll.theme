@@ -2,24 +2,16 @@
     <div class="nav-wrap">
         <div class="list">
             <h2>
-                Title
+                {{ site.sidebar_title }}
             </h2>
             <ul id="filter" class="filters">
-                <li >
-                    <a href="#">
-                        Item
-                    </a>
-                </li>
-                <li >
-                    <a href="#">
-                        Item
-                    </a>
-                </li>
-                <li >
-                    <a href="#">
-                        Item
-                    </a>
-                </li>
+                {% for item in site.sidebar_items %}
+                    <li >
+                        <a href="{{ item.url }}">
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor%}
             </ul>
         </div>
     </div>

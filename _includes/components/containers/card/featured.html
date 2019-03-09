@@ -1,7 +1,7 @@
-<div class="col-xs-12 col-sm-4 card-wrap">
-  <article class="card" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+<div class="col-xs-12 col-sm-{{include.columns|default:4}} card-wrap">
+  <article class="card desaturated card-round" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="{{include.url}}">
-      <img src="{{site.cdn}}work/climate/preloader.svg" data-src="{{site.cdn}}work/climate/{{include.thumb}}">
+      <img src="{{site.cdn}}work/climate/preloader.svg" data-src="{{ site.cdn }}{{ include.version }}work/{{ include.thumb }}">
       <div class="content">
         <h3>{{include.title}}</h3>
       </div>

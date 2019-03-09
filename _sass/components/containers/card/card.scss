@@ -7,8 +7,6 @@ transform 250ms ease-in-out;
 .card {
     position: relative;
     background: $light;
-    border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 15px 25px $mid-light;
     transition: $transition;
     height:100%;
@@ -82,6 +80,11 @@ transform 250ms ease-in-out;
         right: 1rem;
         position: absolute;
     }
+}
+
+.card-round{
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 

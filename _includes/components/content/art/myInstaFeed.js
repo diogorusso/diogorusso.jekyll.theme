@@ -19,4 +19,4 @@ var feed = new Instafeed({
 feed.run();
 
 
-console.log('carregando insta')
+console.log('carregando insta');
