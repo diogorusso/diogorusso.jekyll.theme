@@ -1,0 +1,158 @@
+@mixin AboutBg{ 
+  background:
+      linear-gradient(
+      310deg,
+      rgba(241, 4, 4, 0.9), 
+      rgba(60, 0, 105, 0.95)
+      ), 
+      url('https://res.cloudinary.com/diogorusso/image/upload/v1525651425/about/cover.png')repeat
+  ;    
+}
+
+@mixin AboutBgSmall{ 
+  background: 
+  linear-gradient(
+    310deg,
+    rgba(241, 4, 4, 0.85), 
+    rgba(60, 0, 105, 0.9)
+    )200%, 
+    url('https://res.cloudinary.com/diogorusso/image/upload/v1525651425/about/cover-sm.png') repeat
+; 
+}
+
+
+.bg-dark{
+  background:$dark;
+}
+
+.bg-light{
+  background:$light;
+}
+
+.txt-light{
+
+  color: $light;
+}
+
+.txt-center{
+  text-align: center;
+}
+
+.txt-left{
+  text-align: left;
+}
+
+.masthead{
+  height:100vh;
+  width: 100%; 
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .masthead-wrap{
+    padding: 0 1rem;
+    max-width: 575px;
+
+  }
+
+  .masthead-wrap-large{
+    padding: 0 1rem;
+    max-width: 825px;
+
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  h1{
+    font-size: 3rem;
+  }
+
+  h2{
+    font-family: $font-sans-serif;
+    font-size: 2.2rem;
+    font-weight: 200;
+  }
+  h3{
+    font-size: 1.5rem;
+  }
+}
+
+#scroll-arrow {
+  width: 14px;
+  display: block;
+  margin: 10px auto;
+  font-size:2.5rem;
+  animation: bounceArrow .35s ease-in alternate infinite;
+}
+
+.arrow-wrap{
+  position:absolute; 
+  bottom:10%; 
+  left:50%; 
+  @include translate(-50%, 0);
+  z-index: 3;
+}
+
+.center-content{
+  width:75%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  @include translate(-50%, -50%);
+}
+
+
+@media #{$device-small} {
+  .masthead{
+    // @include mastheadAboutBgSmall;
+    text-align: center;
+    h1{
+      font-size: 1.75rem;
+    }
+  
+    h2{
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+    h3{
+      font-size: 1.2rem;
+    }
+  }
+
+  .arrow-wrap{
+    position:absolute; 
+    bottom:18%; 
+    left:50%; 
+    @include translate(-50%, 0);
+  }
+  .center-content{
+    width:95%;
+    top:40%;
+  }
+}
+
+
+@media #{$device-small-landscape} {
+  .center-content{
+    width:70%;
+    top:45%;
+  }
+  .masthead{
+    text-align: center;
+    h1{
+      font-size: 1.5rem;
+    }
+  
+    h2{
+      font-size: 1.1rem;
+    }
+  }
+  .arrow-wrap{
+    position:absolute; 
+    bottom:2.15rem; 
+  }
+
+}

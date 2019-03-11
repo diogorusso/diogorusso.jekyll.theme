@@ -1,18 +1,18 @@
 // Variables
-@import "scss/variables";
-@import "scss/mixins";
+@import "variables";
+@import "mixins";
 
 //Containers
-@import "components/containers/card/card";
-@import "components/containers/card/portfolio";
-@import "components/containers/card/card-large-slider";
+@import "components/card/card";
+@import "components/card/portfolio";
+@import "components/card/card-large-slider";
 
 // footer
-@import "components/containers/footer/footer";
+@import "components/footer";
 
 // Components
-@import "components/base/button/button";
+@import "components/buttons";
 
 // Content
-@import "scss/vendor/slick";
-@import "components/content/work/climate";
+@import "vendor/slick";
+@import "content/climate";

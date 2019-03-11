@@ -1,34 +1,33 @@
 // Variables
-@import "scss/variables";
-@import "scss/mixins";
+@import "variables";
+@import "mixins";
 
 //style
-@import "scss/typography";
-@import "scss/base";
+@import "typography";
+@import "html";
 //img
 @import "img/img";
 
 //components
-@import "components/base/link/link";
 
-@import "components/content/bio/bio";
+@import "content/bio";
 
 
 // flexbox grid
-@import "scss/vendor/flexboxgrid/flexboxgrid.scss";
+@import "vendor/flexboxgrid/flexboxgrid";
 
 //Containers
-@import "components/containers/nav/nav";
-@import "components/containers/hero/hero";
-@import "components/containers/box/box";
-@import "components/containers/sidebar/sidebar";
+@import "components/nav";
+@import "components/hero";
+@import "components/box";
+@import "components/sidebar";
 
 
 // Content
-@import "components/content/design/process";
+@import "content/process";
 
 // Prototypes
-@import "components/content/prototypes/prototypes";
+@import "content/prototypes";
 
 
 

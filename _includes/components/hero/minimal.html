@@ -1,0 +1,28 @@
+
+
+<header class="masthead {{ include.bg_color }}">
+    <div class="masthead-{{ include.wrap }} {{ include.text_align }} center-content">
+        <a href="#{{ include.anchor }}" class="page-scroll {{ include.txt_color }}">
+            <h1 class="title-large">
+                {{ include.title }}
+                <br class="show-for-small-only">
+            </h1>
+            <h2>
+                {{ include.subtitle }}
+            </h2>
+            {% if include.legend %}
+            <h3>
+                {{ include.legend }}
+            </h3>
+            {% endif %}
+        </a>
+    </div>
+    {% if include.scroll_arrow == "true"  %}
+        <div class="arrow-wrap"> 
+            <a href="#{{ include.anchor }}" class="page-scroll">
+                <span id="scroll-arrow">👇</span>
+            </a>
+        </div>
+    {% endif %}
+    
+</header>

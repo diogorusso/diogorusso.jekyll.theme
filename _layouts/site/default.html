@@ -2,11 +2,11 @@
 <html lang="en">
   {% include head/site/_main.html %}
   <body>
-    {% include components/containers/nav/nav.html %}
+    {% include components/nav/nav.html %}
     <main>
         {{ content}}
     </main>
-    {% include components/containers/footer/footer.html %}
+    {% include components/footer/footer.html %}
 	<style>
 		{% capture include_to_scssify %}
 		{% include main.scss %}
@@ -14,6 +14,12 @@
 		{{ include_to_scssify | scssify }}
 	</style>  
   <script src="{{ site.baseurl }}/assets/script.js" async></script>
+  {% if page.scripts contains 'instagram' %}
+    <script src="{{ site.baseurl }}/assets/instagram.js" async></script>
+  {% endif %}
+  {% if page.scripts contains 'behance' %}
+    <script src="{{ site.baseurl }}/assets/behance.js" async></script>
+  {% endif %}
   </body>
 </html>
 
