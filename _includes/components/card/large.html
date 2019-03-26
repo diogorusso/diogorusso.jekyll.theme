@@ -17,7 +17,7 @@
 {% endcapture %}
 
 {% capture col_image %}
-  <div class="col-xs-12 col-sm-8">
+  <div class="col-xs-12 col-md-8">
      {% if include.type == "slider" %}
         {{ image_slider}}
       {% else %}
@@ -28,9 +28,9 @@
 
 {%capture col_content %}
   {% if include.align == "right" %}
-    <div class="col-xs-12 col-sm-3 first-xs last-sm">
+    <div class="col-xs-12 col-md-3 first-xs last-sm">
   {% else %}
-    <div class="col-xs-12 col-sm-3">
+    <div class="col-xs-12 col-md-3">
   {% endif %}
       <h2 style="font-weight:500">{{ include.title }}</h2>
       {% if include.categories != %}
