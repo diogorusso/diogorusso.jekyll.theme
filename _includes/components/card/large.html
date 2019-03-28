@@ -4,8 +4,6 @@
 {% endcapture %}
 
 {% capture count %}{{include.count|default:3}}{% endcapture %}
-
-
 {% capture image_slider %}
   <div class="card-large-slider">
       {% for num in (1..count) %}
@@ -30,7 +28,7 @@
   {% if include.align == "right" %}
     <div class="col-xs-12 col-md-3 first-xs last-sm">
   {% else %}
-    <div class="col-xs-12 col-md-3">
+    <div class="col-xs-12 col-md-3 last-xs first-sm">
   {% endif %}
       <h2 style="font-weight:500">{{ include.title }}</h2>
       {% if include.categories != %}
@@ -44,7 +42,7 @@
         </div>
       {% endif%}
       {% if include.url != %}
-        <a href="{{ site.baseurl }}{{ include.url }}" class="button" style="margin: 2rem 0;padding: 1rem 3rem; font-size:1rem; text-decoration:none; color:white;background:black;">
+        <a href="{{ site.baseurl }}{{ include.url }}" class="button" style="margin: 2rem 0;padding: 1rem 3rem; font-size:1rem;">
           Read More
         </a>
       {% endif%}

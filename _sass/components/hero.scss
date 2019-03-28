@@ -58,7 +58,7 @@
 
   .masthead-wrap-large{
     padding: 0 1rem;
-    max-width: 825px;
+    max-width: 765px;
 
   }
   
@@ -67,6 +67,10 @@
   }
   h1{
     font-size: 3rem;
+  }
+
+  .jumbo{
+      font-size:6rem; 
   }
 
   h2{
@@ -104,6 +108,14 @@
   @include translate(-50%, -50%);
 }
 
+@media #{$device-medium} {
+  .masthead{
+    .jumbo{
+      font-size:4.5rem; 
+    }
+  }
+}
+
 
 @media #{$device-small} {
   .masthead{
@@ -116,9 +128,14 @@
     h2{
       font-size: 1.3rem;
       font-weight: 300;
+      padding: 0 .65rem; 
     }
     h3{
       font-size: 1.2rem;
+    }
+    .jumbo{
+      font-size:3.5rem;
+      line-height: 1; 
     }
   }
 
@@ -130,15 +147,15 @@
   }
   .center-content{
     width:95%;
-    top:40%;
+    top:50%;
   }
 }
 
 
 @media #{$device-small-landscape} {
   .center-content{
-    width:70%;
-    top:45%;
+    width:90%;
+    top:50%;
   }
   .masthead{
     text-align: center;
@@ -148,6 +165,9 @@
   
     h2{
       font-size: 1.1rem;
+    }
+    .jumbo{
+      font-size:2.4rem;
     }
   }
   .arrow-wrap{
