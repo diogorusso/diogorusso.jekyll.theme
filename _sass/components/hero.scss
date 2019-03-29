@@ -58,7 +58,7 @@
 
   .masthead-wrap-large{
     padding: 0 1rem;
-    max-width: 765px;
+    max-width: 730px;
 
   }
   
@@ -70,12 +70,13 @@
   }
 
   .jumbo{
-      font-size:4rem; 
+      font-size:5.4rem;
+      margin-bottom:1rem; 
   }
 
   h2{
     font-family: $font-sans-serif;
-    font-size: 2.1rem;
+    font-size: 3rem;
     font-weight: 200;
   }
   h3{
@@ -111,7 +112,10 @@
 @media #{$device-medium} {
   .masthead{
     .jumbo{
-      font-size:3.75rem; 
+      font-size:4.75rem; 
+    }
+    h2{
+      font-size:2.5rem;
     }
   }
 }
@@ -126,15 +130,15 @@
     }
   
     h2{
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 300;
       padding: 0 .65rem; 
     }
     h3{
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     .jumbo{
-      font-size:3.5rem;
+      font-size:2.5rem;
       line-height: 1; 
     }
   }
@@ -147,7 +151,7 @@
   }
   .center-content{
     width:95%;
-    top:50%;
+    top:45%;
   }
 }
 
@@ -155,7 +159,7 @@
 @media #{$device-small-landscape} {
   .center-content{
     width:90%;
-    top:50%;
+    top:45%;
   }
   .masthead{
     text-align: center;

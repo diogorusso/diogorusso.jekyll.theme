@@ -47,3 +47,66 @@
       }
   }
 
+//  visibility
+
+.hide {
+	display:none;
+}
+
+.show {
+	display:block;
+}
+
+.#{'hide-'} {
+	// Hide >= XS breakpoint
+	&xs {
+		@media #{$device-x-small} {
+			display:none!important;
+		}
+	}
+	// Hide >= SM breakpoint
+	&sm {
+		@media #{$device-small} {
+			display:none!important;
+		}
+	}
+	// Hide >= MD breakpoint
+	&md {
+		@media #{$device-medium} {
+			display:none!important;
+		}
+	}
+	// Hide >= LG breakpoint
+	&lg {
+		@media #{$device-large} {
+			display:none!important;
+		}
+	}
+}
+
+.#{'show-'} {
+	// Show >= XS breakpoint
+	&xs {
+		@media #{$device-x-small} {
+			display:block!important;
+		}
+	}
+	// Show >= SM breakpoint
+	&sm {
+		@media #{$device-small} {
+			display:block!important;
+		}
+	}
+	// Show >= MD breakpoint
+	&md {
+		@media #{$device-medium} {
+			display:block!important;
+		}
+	}
+	// Show >= LG breakpoint
+	&lg {
+		@media #{$device-large} {
+			display:block!important;
+		}
+	}
+}
