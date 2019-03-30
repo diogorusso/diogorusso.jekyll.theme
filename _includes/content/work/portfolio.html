@@ -1,39 +1,61 @@
-<div class="box">
-        {% capture img_coca %}
-        {{ site.cdn }}{{ include.version }}work/Coca-Cola_FWC_14-w624h351.jpg
-        {% endcapture %}
-        {% include components/card/large.html 
-                url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
-                title="World Cup Brazil" 
-                category="Creative Direction, Film, Photography"
-                description="Mix and match illustrations of people using a design library. Combine clothes, hair, poses, scenes. #1 Product of the Day Dec 3rd, 2018, on Product Hunt. Typewolf—Site of the Day.Site built using Webflow.Open-source for personal and commercial use." 
-                image=img_coca 
-        %}
-        {% capture img_lpc %}
-        {{ site.cdn }}{{ include.version }}work/launchpad-w624h351.jpg
-        {% endcapture %}
-        {% include components/card/large.html 
-                url="https://work.diogorusso.com/launchpad" 
-                title="LaunchPad UX" 
-                category="UI/UX, Product Design" 
-                image=img_lpc 
-        %}
-        {% capture img_foodtopia %}
-        {{ site.cdn }}{{ include.version }}work/foodtopia-w624h351.jpg
-        {% endcapture %}
-        {% include components/card/large.html 
-                url="https://work.diogorusso.com/foodtopia" 
-                title="FOODTOPIA xD" 
-                category="UI/UX and Product Design" 
-                image=img_foodtopia 
-        %}
-        {% capture img_kenner %}
-        {{ site.cdn }}{{ include.version }}work/Kenner_Music_case-w624h351.jpg
-        {% endcapture %}
-        {% include components/card/large.html 
-                url="https://work.diogorusso.com/kenner-ixd-motion" 
-                title="Kenner IxD & Video" 
-                category="Creative Direction, Interaction Design" 
-                image=img_kenner
-        %}
-</div>
+<div class="portfolio-title">
+                <h2>Digital Tools for Farmers</h2>
+                <h3>Transforming field data into meaningful insights.<br/> UX & Product design at <a href="https://climate.com">climate.com</a></h3>
+        </div>
+        
+<section style="padding-top: 4rem;padding-bottom: 4rem;">
+        <div class="box">
+                {% capture img_coca %}
+                {{ site.cdn }}{{ include.version }}work/hero_SA_1920-1080.png
+                {% endcapture %}
+                {% include components/card/large.html 
+                        url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
+                        title="Predictive Seed Placement Recommendations" 
+                        category="Creative Direction, Film, Photography"
+                        description="Mix and match illustrations of people using a design library. Combine clothes, hair, poses, scenes. #1 Product of the Day Dec 3rd, 2018, on Product Hunt. Typewolf—Site of the Day.Site built using Webflow.Open-source for personal and commercial use." 
+                        image=img_coca 
+                %}
+        </div>
+</section>
+<section style="padding-top: 4rem;padding-bottom: 4rem;">
+        <div class="box">
+                {% capture img_lpc %}
+                {{ site.cdn }}{{ include.version }}work/hero_RX_1920-1080.png
+                {% endcapture %}
+                {% include components/card/large.html 
+                        url="https://work.diogorusso.com/launchpad" 
+                        title="Advanced Variable Rate Seed Prescriptions" 
+                        category="UI/UX, Product Design"
+                        description="Mix and match illustrations of people using a design library. Combine clothes, hair, poses, scenes. #1 Product of the Day Dec 3rd, 2018, on Product Hunt. Typewolf—Site of the Day.Site built using Webflow.Open-source for personal and commercial use."  
+                        image=img_lpc 
+                %}
+        </div>
+</section>
+<section style="padding-top: 4rem;padding-bottom: 4rem;">
+        <div class="box">
+                {% capture img_foodtopia %}
+                {{ site.cdn }}{{ include.version }}work/hero_SYNC_1920-1080.png
+                {% endcapture %}
+                {% include components/card/large.html 
+                        url="https://work.diogorusso.com/foodtopia" 
+                        title="Data Mule for Large Farming Operations" 
+                        category="UI/UX and Product Design" 
+                        image=img_foodtopia 
+                %}
+        </div>
+</section>
+<section style="padding-top: 4rem;padding-bottom: 4rem;">
+        <div class="box">
+                {% capture img_kenner %}
+                {{ site.cdn }}{{ include.version }}work/hero_RX_1920-1080.png
+                {% endcapture %}
+                {% include components/card/large.html 
+                        url="https://work.diogorusso.com/kenner-ixd-motion" 
+                        title="Kenner IxD & Video" 
+                        category="Creative Direction, Interaction Design" 
+                        description="Mix and match illustrations of people using a design library. Combine clothes, hair, poses, scenes. #1 Product of the Day Dec 3rd, 2018, on Product Hunt. Typewolf—Site of the Day.Site built using Webflow.Open-source for personal and commercial use." 
+                        image=img_kenner
+                %}
+        </div>
+</section>
+
