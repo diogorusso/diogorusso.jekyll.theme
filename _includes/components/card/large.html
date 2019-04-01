@@ -26,11 +26,11 @@
 
 {%capture col_content %}
   {% if include.align == "right" %}
-    <div class="col-xs-12 col-md-3 first-xs last-sm">
+    <div class="col-xs-12 col-md-4 first-xs last-sm">
   {% else %}
-    <div class="col-xs-12 col-md-3 last-xs first-sm">
+    <div class="col-xs-12 col-md-4 last-xs first-sm">
   {% endif %}
-      <h2 style="font-weight:500">{{ include.title }}</h2>
+      <h2 style="font-weight:500; font-size:1.5rem;">{{ include.title }}</h2>
       {% if include.categories != %}
         <p class="author">
           <span class="date">{{ include.categories }}</span>
