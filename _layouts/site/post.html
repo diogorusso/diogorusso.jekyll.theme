@@ -1,7 +1,7 @@
 ---
 layout: site/default
 ---
-{% include components/hero/minimal.html
+{% comment %} {% include components/hero/minimal.html
         title=page.title
         subtitle= page.category
         anchor=page.title
@@ -16,4 +16,22 @@ layout: site/default
     <h3>{{page.tags}}</h3>
     <h3>{{page.author}}</h3>
     <img src="{{site.cdn}}work/climate/preloader.svg" data-src="{{site.cdn}}work/projects/{{page.slug}}/cover.jpg">
+    {{content}}
+</div> {% endcomment %}
+
+<div class="box ">
+    <section class="section intro">
+        <h1>{{page.title}}</h1>
+        <div class="metadata">
+            <p>
+                <a href="">Diogo Russo</a>
+            </p>
+        </div>
+    </section>
+    
+    <section class="section">
+        {{content}}
+    </section>
+       
+   
 </div>
