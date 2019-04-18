@@ -11,9 +11,7 @@
 .bio-wrap {
     text-align: center;
 }
-.profile {
-    width: 50%;
-}
+
 
 .profile-wrap{
     display:flex;
@@ -23,7 +21,6 @@
 
 
 .sign-wrap { 
-    width: 50%;
     position:relative;
     background:#f3f3f3;
 }
@@ -56,12 +53,7 @@
         }
     }
 
-    .profile {
-        width: 100%;
-    }
-    .sign-wrap{
-        width: 100%;
-    }
+    
     .sign{
         padding-top:1rem;
         min-height:10rem;
