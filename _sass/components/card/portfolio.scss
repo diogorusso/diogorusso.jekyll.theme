@@ -7,6 +7,7 @@
 
 .portfolio-item{
     position: relative;
+    margin-bottom:3rem;
     a {
         text-decoration: none;
     }
@@ -14,14 +15,15 @@
         padding: calc(#{$gutter} / 2);
         text-align: center;
         h3{
-            font-size: 1.4rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.2rem;
             -webkit-margin-before: 0;
             -webkit-margin-after: .75rem;
         }
         p{
-            color: $dark;
-            text-transform: uppercase;
-            font-size: .9rem;
+            color: #717171;
+            // text-transform: uppercase;
+            font-size: 1.2rem;
         }
     }
 

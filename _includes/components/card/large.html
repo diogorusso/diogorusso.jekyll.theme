@@ -52,12 +52,16 @@
   </div>
 {% endcapture %}
 
-<div class="row middle-sm between-sm">
-  {% if include.align == "right" %}
-    {{ col_image }}
-    {{ col_content }}
-  {% else %}
-    {{ col_content }}
-    {{ col_image }}
-  {% endif %}  
-</div>
+<section class="section-spacing">
+  <div class="box">
+    <div class="row middle-sm between-sm">
+      {% if include.align == "right" %}
+        {{ col_image }}
+        {{ col_content }}
+      {% else %}
+        {{ col_content }}
+        {{ col_image }}
+      {% endif %}  
+    </div>
+  </div>
+</section>

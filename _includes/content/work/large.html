@@ -1,0 +1,89 @@
+<div class="portfolio-title">
+                <h2>Work & Play</h2>
+                <h3>I'm an an optimist dedicated to help bringing projects to life.I have fun making things and sharing ideas.</h3>
+        </div>
+
+<div class="projects-climate">     
+        {% comment %} <div class="row portfolio-title">
+                <div class="col-xs-12">
+                <h2>Digital Tools for Farmers</h2>
+                <h3>2016 - Now ∙ Product Designer at <a href="climate.com">Climate.com</a></h3>
+                </div>
+        </div> {% endcomment %}
+       
+        {% capture img_coca %}
+        {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080.png
+        {% endcapture %}
+        {% include components/card/large.html 
+                url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
+                title="Predictive Seed Recommendations"
+                subtitle="UX + Product Design A.I. Web Application - <a href=\"climate.com\">Seed Advisor</a>" 
+                category="Creative Direction, Film, Photography" 
+                image=img_coca 
+        %}
+
+        {% capture img_lpc %}
+        {{ site.cdn }}{{ include.version }}work/hero_RX2_1920-1080.png
+        {% endcapture %}
+        {% include components/card/large.html 
+                url="https://work.diogorusso.com/launchpad" 
+                title="Advanced Seed Prescriptions"
+                subtitle="UX + UI Design - <a href=\"climate.com\">Fieldview Variable Rate</a> for Web, iOS and Android" 
+                categories="2017 - 2018" 
+                image=img_lpc 
+        %}
+
+        {% capture img_foodtopia %}
+        {{ site.cdn }}{{ include.version }}work/hero_SYNC2_1920-1080.png
+        {% endcapture %}
+        {% include components/card/large.html 
+                url="https://work.diogorusso.com/foodtopia" 
+                title="Data Mule for Large Farming Operations"
+                subtitle="UX + Product Design <a href=\"dmba\">FieldView Sync</a> iOS App" 
+                categories="2016-2017"
+                image=img_foodtopia 
+        %}
+  
+
+  
+
+{% comment %} <div class="row portfolio-title">
+        <div class="col-xs-12">
+        <h2>Work, Learn & Play</h2>
+        <h3>Previous Work</h3>
+        </div>
+</div> {% endcomment %}
+
+                        {% capture img_foodtopia %}
+                        {{ site.cdn }}{{ include.version }}work/projects/20160523_Launchpad_UX/cover.jpg
+                        {% endcapture %}
+                        {% include components/card/large.html 
+                                url="https://work.diogorusso.com/foodtopia" 
+                                title="Strategy & Experience Design at <a href=\"dmba\">DMBA</a>"
+                                subtitle="MBA Design Stratregy at California College of the Arts" 
+                                categories="2014 - 2016 " 
+                                image=img_foodtopia 
+                        %}
+                        
+
+                        {% capture img_foodtopia %}
+                        {{ site.cdn }}{{ include.version }}work/projects/20160523_Coca-Cola_FWC2014/cover.jpg
+                        {% endcapture %}
+                        {% include components/card/large.html 
+                                url="https://work.diogorusso.com/foodtopia" 
+                                title="Graphics, Interaction & Motion Design"
+                                subtitle="2010 - 2014 ∙ Design Studio Co-Founder + Creative Director" 
+                                category="UI/UX and Product Design"
+                                image=img_foodtopia 
+                        %}
+                        {% capture img_coca %}
+                        {{ site.cdn }}{{ include.version }}work/hero_Artwork_1920-1080.png
+                        {% endcapture %}
+                        {% include components/card/large.html 
+                                url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
+                                title="Illustration & Artwork" 
+                                subtitle="Tropical Colors ∙ Vivid Forms ∙ Imaginative Shapes " 
+                                image=img_coca 
+                        %}
+        
+</div>
