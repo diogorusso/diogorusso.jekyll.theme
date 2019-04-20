@@ -1,24 +1,9 @@
-.bio {
+
+.bio-description{
     text-align: center;
-    display: block;
-
-    .description{
-        margin: 4.5rem auto 6rem auto;
-        max-width:635px;
-    }
-
+    margin: 4.5rem auto 6rem auto;
+    max-width:635px;
 }
-.bio-wrap {
-    text-align: center;
-}
-
-
-.profile-wrap{
-    display:flex;
-    width:100%;
-    flex-flow:row wrap;
-}
-
 
 .sign-wrap { 
     position:relative;

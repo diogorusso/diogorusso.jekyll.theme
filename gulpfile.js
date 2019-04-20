@@ -87,4 +87,6 @@ gulp.task("js", js);
 gulp.task("jsInstagram", jsInstagram);
 gulp.task("jsBehance", jsBehance);
 
+gulp.task("scripts", gulp.series(cleanJs,js,jsInstagram,jsBehance));
+
 gulp.task("default", gulp.series(cleanJs,js,jsInstagram,jsBehance,watch));
