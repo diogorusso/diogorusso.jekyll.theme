@@ -8,6 +8,7 @@
 .portfolio-item{
     position: relative;
     margin-bottom:3rem;
+    padding:0;
     a {
         text-decoration: none;
     }
@@ -27,7 +28,6 @@
         }
     }
 
-
 }
 
 .more-projects{
@@ -35,8 +35,8 @@
 }
 
 
-$grayscale:100%;
-    $color:0;
+    $grayscale:0;
+    $color:100%;
     $no-blur:0;
     $blur:100%;
     $saturation:100%;

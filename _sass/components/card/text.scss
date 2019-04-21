@@ -1,0 +1,34 @@
+.card-text{
+  min-height:24rem; margin-bottom:2rem;
+  a{
+    text-decoration: none;
+  }
+  .content-wrapper{
+    padding:2.5rem; 
+    position:relative; 
+    border: solid 1px; 
+    padding:3rem; 
+    height:100%;
+    transition: all 200ms;
+  }
+  h3{
+    font-size:1.5rem;
+    transition: all 200ms;
+  }
+  small{
+    bottom: 2.5rem;
+    position: absolute;
+    right: 3rem;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    transition: all 200ms;
+    color: #717171;
+    // text-transform: uppercase;
+    font-size: 1rem;
+  }
+  &:hover{
+    .content-wrapper{background:$dark;transition: all 500ms;}
+    h3, small{ color:$light;transition: all 500ms;}
+    
+  }
+}
