@@ -2,11 +2,16 @@
 @import "variables";
 @import "mixins";
 
+
 //style
 @import "typography";
 @import "html";
+
 //img
 @import "img/img";
+
+// AOS
+@import "vendor/aos";
 
 //components
 

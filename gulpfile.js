@@ -19,6 +19,10 @@ function js() {
   var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
   var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
   var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
+  var rellax = gulp.src('node_modules/rellax/rellax.js');
+  var rellaxInit = gulp.src('_includes/js/rellax.js');
+  var aos = gulp.src('node_modules/aos/dist/aos.js');
+  var aosInit = gulp.src('_includes/js/aos.js');
   var slickSlider = gulp.src('node_modules/slick-carousel/slick/slick.js');
   var slickProcess = gulp.src('_includes/content/process/slick.js');
   var slickLarge = gulp.src('_includes/components/card/large.js');
@@ -32,7 +36,11 @@ function js() {
   return merge(
         jquery, 
         jQeasing, 
-        lazyLoad, 
+        lazyLoad,
+        rellax,
+        rellaxInit,
+        aos,
+        aosInit, 
         slickSlider,
         navScript,
         pageScroll,
