@@ -19,10 +19,6 @@ function js() {
   var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
   var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
   var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
-  var rellax = gulp.src('node_modules/rellax/rellax.js');
-  var rellaxInit = gulp.src('_includes/js/rellax.js');
-  var aos = gulp.src('node_modules/aos/dist/aos.js');
-  var aosInit = gulp.src('_includes/js/aos.js');
   var slickSlider = gulp.src('node_modules/slick-carousel/slick/slick.js');
   var slickProcess = gulp.src('_includes/content/process/slick.js');
   var slickLarge = gulp.src('_includes/components/card/large.js');
@@ -37,10 +33,6 @@ function js() {
         jquery, 
         jQeasing, 
         lazyLoad,
-        rellax,
-        rellaxInit,
-        aos,
-        aosInit, 
         slickSlider,
         navScript,
         pageScroll,
@@ -48,7 +40,7 @@ function js() {
         typeFxScript,
         slickProcess,
         slickLarge,
-        prototypeScript,
+        prototypeScript, 
         gA
     )
     .pipe(buffer())
@@ -56,6 +48,25 @@ function js() {
     .pipe(uglify())
     .pipe(gulp.dest('assets/'));  
 }
+
+function jsAnimation(){
+  var rellax = gulp.src('node_modules/rellax/rellax.js');
+  var rellaxInit = gulp.src('_includes/js/rellax.js');
+  var aos = gulp.src('node_modules/aos/dist/aos.js');
+  var aosInit = gulp.src('_includes/js/aos.js');
+
+  return merge(
+    rellax,
+    aos,
+    rellaxInit,
+    aosInit
+  )
+  .pipe(buffer())
+    .pipe(concat('animation.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/'));  
+}
+
 function jsInstagram() {
   var instaFeed = request('https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js')
         .pipe(source('instaFeed.js'));
@@ -94,7 +105,8 @@ gulp.task("cleanJs", cleanJs);
 gulp.task("js", js);
 gulp.task("jsInstagram", jsInstagram);
 gulp.task("jsBehance", jsBehance);
+gulp.task("jsAnimation", jsAnimation);
 
-gulp.task("scripts", gulp.series(cleanJs,js,jsInstagram,jsBehance));
+gulp.task("scripts", gulp.series(cleanJs,js,jsInstagram,jsBehance,jsAnimation));
 
-gulp.task("default", gulp.series(cleanJs,js,jsInstagram,jsBehance,watch));
+gulp.task("default", gulp.series(cleanJs,js,jsInstagram,jsBehance,jsAnimation,watch));
