@@ -57,8 +57,8 @@ function jsAnimation(){
 
   return merge(
     rellax,
-    aos,
     rellaxInit,
+    aos,
     aosInit
   )
   .pipe(buffer())
