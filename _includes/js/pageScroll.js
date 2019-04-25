@@ -11,8 +11,8 @@ $(function() {
 var heroBg = $('.hero-post');
     heroTitle = $('.hero-post-box');
     //when scrolltop reaches 35px then opacity of divs is 1 - 35/35 = 0
-    limitTitle = 300;
-    limitBg = 500;  
+    limitTitle = 200;
+    limitBg = 300;  
 
 $(window).on('scroll', function() { 
   
