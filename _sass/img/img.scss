@@ -13,13 +13,37 @@
   
 
   
-  .img-loaded{
-    background: #F3F3F3;
-    @include vendor-prefix('animation', 'fadein .5s');
+  .lazy-loaded{
+    opacity: 1;
+    @include vendor-prefix('transition', 'opacity 2s');
   }
+
+  .lazy-hidden{opacity:0;}
+
   
   @include keyframes(fadein){
     from { opacity: 0; }
     to   { opacity: 1; }
+  }
+
+  $color-base: #ccc;
+$color-highlight: lighten($color-base, 7%);
+
+.card-large-img{
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  animation: Gradient .5s ease infinite;
+  }
+
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
   }
   
