@@ -32,3 +32,16 @@
     
   }
 }
+
+.work-large{
+  &:hover{
+    img{
+    opacity:.4;
+    transition: all .5s;
+    }
+  }
+  img{
+    opacity: 1;
+    transition: all .5s;
+  }
+}

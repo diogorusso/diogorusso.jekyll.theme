@@ -28,9 +28,9 @@
 
 {%capture col_content %}
   {% if include.align == "right" %}
-    <div class="col-xs-12 col-md-4 col-lg-3 first-xs last-sm">
+    <div class="col-xs-12 col-md-4 col-lg-3 first-xs first-sm last-md">
   {% else %}
-    <div class="col-xs-12 col-md-4 col-lg-3 last-xs first-sm">
+    <div class="col-xs-12 col-md-4 col-lg-3 last-xs last-sm first-md">
   {% endif %}
       <h2 style="font-weight:500; font-size:1.5rem;">{{ include.title }}</h2>
       {% if include.subtitle != %}
@@ -56,7 +56,7 @@
 
 <section class="section-spacing">
   <div class="box">
-    <div class="row middle-sm between-sm">
+    <div class="work-large row middle-sm between-sm">
       {% if include.align == "right" %}
         {{ col_image }}
         {{ col_content }}
