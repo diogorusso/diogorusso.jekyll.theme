@@ -15,7 +15,7 @@
   
   .lazy-loaded{
     opacity: 1;
-    @include vendor-prefix('transition', 'opacity 2s');
+    @include vendor-prefix('transition', 'opacity .3s');
   }
 
   .lazy-hidden{opacity:0;}
