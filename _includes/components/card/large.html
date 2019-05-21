@@ -24,10 +24,17 @@
 
 {% capture count %}{{include.count|default:3}}{% endcapture %}
 {% capture image_slider %}
-  <div class="card-large-slider">
+  <div class="card-large-slider card-slider">
       {% for num in (1..count) %}
+          {% capture img_path %}
+            {%if num >1 %}
+              {{ site.cdn }}{{ include.version }}work/{{ include.path }}_{{num}}.{{include.imgType}}
+            {% else %}
+              {{ site.cdn }}{{ include.version }}work/{{ include.path }}.{{include.imgType}}
+            {% endif %}
+          {% endcapture %}
           <div>
-              <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
+              <img src="{{site.cdn}}work/preloader.svg" data-src="{{img_path}}">
           </div>
       {% endfor %}
   </div>
@@ -45,9 +52,9 @@
 
 {%capture col_content %}
   {% if include.align == "right" %}
-    <div class="col-xs-12 col-md-4 col-lg-3 first-xs first-sm last-md">
+    <div class="col-xs-12 col-md-4 col-lg-3 first-xs first-sm last-md center-xs start-md">
   {% else %}
-    <div class="col-xs-12 col-md-4 col-lg-3 last-xs last-sm first-md">
+    <div class="col-xs-12 col-md-4 col-lg-3 last-xs last-sm first-md center-xs start-md">
   {% endif %}
       <h2 style="font-weight:500; font-size:1.5rem;">{{ include.title }}</h2>
       {% if include.subtitle != %}
@@ -73,7 +80,7 @@
 
 <section class="section-spacing">
   <div class="box">
-    <div class="row middle-sm between-sm center-xs">
+    <div class="row middle-sm between-sm">
       {% if include.align == "right" %}
         {{ col_image }}
         {{ col_content }}

@@ -19,14 +19,16 @@
         </div> {% endcomment %}
        
         {% capture img_coca %}
-        {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080.png
+                
         {% endcapture %}
-        {% include components/card/large.html 
+        {% include components/card/large.html
+                type="slider"
+                count=3
+                path="hero_SA2_1920-1080"
+                imgType="png" 
                 url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
                 title="Predictive Seed Recommendations"
-                subtitle="UX + Product Design A.I. Web Application - <a href=\"climate.com\">Seed Advisor</a>" 
-                category="Creative Direction, Film, Photography" 
-                categories="2018"
+                categories="UX + Product Design"
                 image=img_coca 
         %}
 
@@ -36,8 +38,7 @@
         {% include components/card/large.html 
                 url="https://work.diogorusso.com/foodtopia" 
                 title="Data Mule for Large Farming Operations"
-                subtitle="UX + Product Design <a href=\"dmba\">FieldView Sync</a> iOS App" 
-                categories="2017"
+                categories="UX + Product Design" 
                 image=img_foodtopia 
         %}
 
@@ -47,8 +48,7 @@
         {% include components/card/large.html 
                 url="https://work.diogorusso.com/launchpad" 
                 title="Advanced Seed Prescriptions"
-                subtitle="UX + UI Design - <a href=\"climate.com\">Fieldview Variable Rate</a> for Web, iOS and Android" 
-                categories="2017" 
+                categories="UX + Product Design"  
                 image=img_lpc 
         %}
   
@@ -67,9 +67,8 @@
                         {% endcapture %}
                         {% include components/card/large.html 
                                 url="https://work.diogorusso.com/foodtopia" 
-                                title="Strategy & Experience Design at <a href=\"dmba\">DMBA</a>"
-                                subtitle="MBA Design Stratregy at California College of the Arts" 
-                                categories="2014 - 2016 " 
+                                title="Strategy & Experience Design"
+                                categories="MBA Design Strategy" 
                                 image=img_foodtopia 
                         %}
                         
@@ -80,8 +79,7 @@
                         {% include components/card/large.html 
                                 url="https://work.diogorusso.com/foodtopia" 
                                 title="Graphics, Interaction & Motion Design"
-                                subtitle="2010 - 2014 ∙ Design Studio Co-Founder + Creative Director" 
-                                category="UI/UX and Product Design"
+                                categories="Creative Direction"
                                 image=img_foodtopia 
                         %}
                         {% capture img_coca %}
@@ -90,7 +88,6 @@
                         {% include components/card/large.html 
                                 url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
                                 title="Illustration & Artwork" 
-                                subtitle="Tropical Colors ∙ Vivid Forms ∙ Imaginative Shapes " 
                                 image=img_coca 
                         %}
         
