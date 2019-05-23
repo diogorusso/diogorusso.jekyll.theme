@@ -17,7 +17,8 @@ function cleanJs() {
 
 function js() {
   var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
-  var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.js');
+  var lazyLoad = request('https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.extra.js')
+        .pipe(source('lazyLoad'));
   var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
   var slickSlider = gulp.src('node_modules/slick-carousel/slick/slick.js');
   var slickProcess = gulp.src('_includes/content/process/slick.js');

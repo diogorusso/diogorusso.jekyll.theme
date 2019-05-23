@@ -22,21 +22,21 @@
 </div>
 {% endcapture %}
 
-{% capture count %}{{include.count|default:3}}{% endcapture %}
+
+
 {% capture image_slider %}
-  <div class="card-large-slider card-slider">
+  {% assign imgs = include.img | split: ',' %}
+  {% assign count = imgs | size  %}
+  <div class="card-large-slider">
       {% for num in (1..count) %}
-          {% capture img_path %}
-            {%if num >1 %}
-              {{ site.cdn }}{{ include.version }}work/{{ include.path }}_{{num}}.{{include.imgType}}
-            {% else %}
-              {{ site.cdn }}{{ include.version }}work/{{ include.path }}.{{include.imgType}}
-            {% endif %}
-          {% endcapture %}
+          {% assign index = num | minus: 1 %}
           <div class="card-large-img ratio16-9" style="position:relative; display:inline-block;width:100%;overflow:hidden;">
-              <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{img_path}}">
+              {% if imgs[index] contains '.mp4' %}
+                  <video class="img-content" src="{{imgs[index]}}" muted autoplay loop playsinline></video>
+              {% else %}
+                  <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{imgs[index]}}">
+              {% endif %}
           </div>
-          
       {% endfor %}
   </div>
 {% endcapture %}
@@ -72,7 +72,7 @@
         </div>
       {% endif%}
       {% if include.url != %}
-        <a href="{{ site.baseurl }}{{ include.url }}" class="button" style="margin: 2rem 0;padding: 1rem 3rem; font-size:1rem;">
+        <a href="{{ include.url }}" class="button" style="margin: 2rem 0;padding: 1rem 3rem; font-size:1rem;">
           Read More
         </a>
       {% endif%}

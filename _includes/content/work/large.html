@@ -19,17 +19,19 @@
         </div> {% endcomment %}
        
         {% capture img_coca %}
-                
+         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080.png,
+         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080_2.mp4,
+         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080_2.gif,
+         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080_3.png
         {% endcapture %}
+        
         {% include components/card/large.html
                 type="slider"
-                count=3
-                path="hero_SA2_1920-1080"
-                imgType="png" 
-                url="https://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola" 
+                img=img_coca
+                url="https://work.diogorusso.com/foodtopia" 
                 title="Predictive Seed Recommendations"
                 categories="UX + Product Design"
-                image=img_coca 
+                path=img_coca 
         %}
 
         {% capture img_foodtopia %}

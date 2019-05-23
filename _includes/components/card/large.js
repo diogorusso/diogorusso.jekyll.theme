@@ -6,6 +6,8 @@ jQuery(document).ready(function($) {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
+        autoplay:true,
+        autoplaySpeed:3000,
         // infinite: false,
         lazyLoad: 'ondemand',
         // infinite: false,
@@ -17,5 +19,6 @@ jQuery(document).ready(function($) {
         // asNavFor: '.process-pager-slider'
         adaptiveHeight: false,
     });
+    
 
 });
