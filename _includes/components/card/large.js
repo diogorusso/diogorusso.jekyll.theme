@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
         arrows: true,
         fade: true,
         autoplay:true,
-        autoplaySpeed:3000,
+        // autoplaySpeed:3000,
         // infinite: false,
         lazyLoad: 'ondemand',
         // infinite: false,

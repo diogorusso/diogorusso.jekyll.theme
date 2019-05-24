@@ -19,10 +19,7 @@
         </div> {% endcomment %}
        
         {% capture img_coca %}
-         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080.png,
-         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080_2.mp4,
-         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080_2.gif,
-         {{ site.cdn }}{{ include.version }}work/hero_SA2_1920-1080_3.png
+         {{ site.cdn }}{{ include.version }}work/featured/sa_3.jpg
         {% endcapture %}
         
         {% include components/card/large.html
@@ -31,27 +28,28 @@
                 url="https://work.diogorusso.com/foodtopia" 
                 title="Predictive Seed Recommendations"
                 categories="UX + Product Design"
-                path=img_coca 
         %}
 
         {% capture img_foodtopia %}
-        {{ site.cdn }}{{ include.version }}work/hero_SYNC2_1920-1080.png
+                {{ site.cdn }}{{ include.version }}work/featured/rx_2.jpg
         {% endcapture %}
         {% include components/card/large.html 
+                type="slider"
+                img=img_foodtopia
                 url="https://work.diogorusso.com/foodtopia" 
                 title="Data Mule for Large Farming Operations"
                 categories="UX + Product Design" 
-                image=img_foodtopia 
         %}
 
         {% capture img_lpc %}
-        {{ site.cdn }}{{ include.version }}work/hero_RX2_1920-1080.png
+                {{ site.cdn }}{{ include.version }}work/featured/sync_1.jpg
         {% endcapture %}
         {% include components/card/large.html 
+                type="slider"
                 url="https://work.diogorusso.com/launchpad" 
                 title="Advanced Seed Prescriptions"
                 categories="UX + Product Design"  
-                image=img_lpc 
+                img=img_lpc 
         %}
   
 
@@ -65,24 +63,26 @@
 </div> {% endcomment %}
 
                         {% capture img_foodtopia %}
-                        {{ site.cdn }}{{ include.version }}work/projects/20160523_Launchpad_UX/cover.jpg
+                                {{ site.cdn }}{{ include.version }}work/featured/cca_3.jpg
                         {% endcapture %}
                         {% include components/card/large.html 
+                                type="slider"
                                 url="https://work.diogorusso.com/foodtopia" 
-                                title="Strategy & Experience Design"
-                                categories="MBA Design Strategy" 
-                                image=img_foodtopia 
+                                title="Strategy and Experience Design"
+                                categories="MBA Design Strategy at CCA" 
+                                img=img_foodtopia 
                         %}
                         
 
                         {% capture img_foodtopia %}
-                        {{ site.cdn }}{{ include.version }}work/projects/20160523_Coca-Cola_FWC2014/cover.jpg
+                                {{ site.cdn }}{{ include.version }}work/featured/br_4.jpg
                         {% endcapture %}
-                        {% include components/card/large.html 
+                        {% include components/card/large.html
+                                type="slider" 
                                 url="https://work.diogorusso.com/foodtopia" 
                                 title="Graphics, Interaction & Motion Design"
                                 categories="Creative Direction"
-                                image=img_foodtopia 
+                                img=img_foodtopia 
                         %}
                         {% capture img_coca %}
                         {{ site.cdn }}{{ include.version }}work/hero_Artwork_1920-1080.png
