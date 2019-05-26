@@ -7,6 +7,6 @@
 
 @media #{$device-medium-small} {
   .portfolio-title{
-    margin: $gutter auto 1rem;
+    margin: $gutter*1.5 auto $gutter;
   }
 }
