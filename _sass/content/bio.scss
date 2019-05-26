@@ -1,7 +1,7 @@
 
 .bio-description{
     text-align: center;
-    margin: 14rem auto 14rem;
+    margin: 14rem auto;
     max-width:635px;
 }
 
@@ -38,9 +38,14 @@
         }
     }
 
+    .bio-description{
+        margin: $gutter auto;
+    }
+    
+
     
     .sign{
-        padding-top:1rem;
+        padding-top:12.5%;
         min-height:10rem;
         img{
             height: 100%;

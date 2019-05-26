@@ -130,7 +130,7 @@ transform 250ms ease-in-out;
     }
 
     .section-spacing{
-        padding-bottom: 4rem;
+        padding-bottom: $gutter/2;
     }
 }
 
@@ -190,7 +190,9 @@ transform 250ms ease-in-out;
             display: none;
         }
         h2{
-            font-size:1.1rem;
+            font-size:1rem;
+            width:80%;
+            margin:1rem auto;
           }
     }
 }

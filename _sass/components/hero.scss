@@ -126,21 +126,24 @@
 
 @media #{$device-small} {
   .masthead{
-    // @include mastheadAboutBgSmall;
+    height: auto;
     text-align: center;
     h1{
       font-size: 3rem;
     }
   
     h2{
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: 200;
+      margin: 3rem auto;
     }
     h3{
-      font-size: 1.75rem;
+      font-size: 1.25rem;
+      max-width: 16rem;
+      margin: auto;
     }
     .jumbo{
-      font-size:5rem;
+      font-size:4rem;
       line-height: 1; 
     }
   }
@@ -152,37 +155,41 @@
     @include translate(-50%, 0);
   }
   .center-content{
+    position: relative;
+    transform: none;
     width:95%;
     top:45%;
+    left:0;
+    margin: 6rem auto 9rem;
   }
 }
 
 
-@media #{$device-small-landscape} {
-  .center-content{
-    width:90%;
-    top:45%;
-  }
-  .masthead{
-    text-align: center;
-    h1{
-      font-size: 1.5rem;
-    }
+// @media #{$device-small-landscape} {
+//   .center-content{
+//     width:90%;
+//     top:45%;
+//   }
+//   .masthead{
+//     text-align: center;
+//     h1{
+//       font-size: 1.5rem;
+//     }
   
-    h2{
-      font-size: 1.25rem;
-    }
-    h3{
-      font-size: 1rem;
-    }
-    .jumbo{
-      font-size:1.85rem;
-      margin-bottom:.5rem;
-    }
-  }
-  .arrow-wrap{
-    position:absolute; 
-    bottom:2.15rem; 
-  }
+//     h2{
+//       font-size: 1.25rem;
+//     }
+//     h3{
+//       font-size: 1rem;
+//     }
+//     .jumbo{
+//       font-size:1.85rem;
+//       margin-bottom:.5rem;
+//     }
+//   }
+//   .arrow-wrap{
+//     position:absolute; 
+//     bottom:2.15rem; 
+//   }
 
-}
+// }

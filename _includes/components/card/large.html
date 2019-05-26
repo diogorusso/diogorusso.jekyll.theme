@@ -1,7 +1,7 @@
 
 {% capture image_single %}
 <div class="card-large-img ratio16-9">
-    <a href="{{ include.url }}" aria-label="{{include.title}}">
+    <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
       <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{ include.image }}" alt="{{include.title}}">
     </a>
 </div>
@@ -16,7 +16,7 @@
       {% for num in (1..count) %}
           {% assign index = num | minus: 1 %}
           <div class="card-large-img ratio16-9">
-              <a href="{{ include.url }}" aria-label="{{include.title}}">
+              <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
                 {% if imgs[index] contains '.mp4' %}
                   <video class="img-content" data-poster="/path/to/poster.jpg" width="320" height="240" muted autoplay loop playsinline>
                       <source data-src="{{imgs[index]}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -47,7 +47,7 @@
   {% else %}
     <div class="col-xs-12 col-md-4 col-lg-3 last-xs last-sm first-md center-xs start-md">
   {% endif %}
-      <a href="{{ include.url }}" aria-label="{{include.title}}">
+      <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
         <h2>{{ include.title }}</h2>
         {% if include.subtitle != %}
         <h3>{{ include.subtitle }}</h3>
@@ -63,7 +63,7 @@
           </div>
         {% endif%}
         {% if include.url != %}
-          <a href="{{ include.url }}" class="button" aria-label="{{include.title}}">
+          <a href="{{ include.url }}" class="button" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
           {{include.buttonLabel}}
           </a>
         {% endif%}
