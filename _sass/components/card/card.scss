@@ -175,12 +175,13 @@ transform 250ms ease-in-out;
         margin: 2rem 0;padding: 1rem 3rem; font-size:1rem;
     }
     p{
-        color:#999999;
+        color:#737373;
     }
     h2{
         font-weight:500; 
         font-size:1.5rem;
-      }
+    }
+
 }
 
 @media #{$device-small} {
