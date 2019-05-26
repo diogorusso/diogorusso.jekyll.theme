@@ -5,34 +5,41 @@
 //   }
   
   
-  // Images
-  img {
-    display: block;
-    width: 100%;
-  }
+// Images
+img {
+  display: block;
+  width: 100%;
+}
   
+.lazy-loaded{
+  opacity: 1;
+  @include vendor-prefix('transition', 'opacity .3s');
+}
 
-  
-  .lazy-loaded{
-    opacity: 1;
-    @include vendor-prefix('transition', 'opacity .3s');
-  }
+.lazy-hidden{opacity:0;}
 
-  .lazy-hidden{opacity:0;}
 
-  
-  @include keyframes(fadein){
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
+@include keyframes(fadein){
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
-  $color-base: #ccc;
+.card-large-img:before {
+  content: '';
+  display: block;
+}
+
+$color-base: #ccc;
 $color-highlight: lighten($color-base, 7%);
 
 .card-large-img{
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
   animation: Gradient 5s ease infinite;
+  position:relative; 
+  display:inline-block;
+  width:100%;
+  overflow:hidden;
   }
 
   @keyframes Gradient {
@@ -47,3 +54,15 @@ $color-highlight: lighten($color-base, 7%);
     }
   }
   
+
+.ratio1-1:before {padding-top: 100%;}
+.ratio2-1:before {padding-top: 50%;}
+.ratio4-3:before {padding-top: 75%;}
+.ratio16-9:before {padding-top: 56.25%;}
+.img-content {    
+   position: absolute;
+   height:100%;
+   width:auto;
+   top: 0; left: 50%; bottom: 0; right: 0;
+   transform: translateX(-50%);
+}

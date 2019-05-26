@@ -1,7 +1,7 @@
 
 .section-spacing{
     padding-top: 2rem;
-    padding-bottom: 15rem;
+    padding-bottom: 12rem;
 }
 
 $transition: box-shadow 250ms ease-in-out,
@@ -128,4 +128,70 @@ transform 250ms ease-in-out;
             font-size: 1rem;
         }
     }
+
+    .section-spacing{
+        padding-bottom: 4rem;
+    }
 }
+
+.floating-wrapper-left{
+    margin-right:-20%;
+  }
+
+  .floating-wrapper-right{
+    margin-left:-20%;
+    
+  }
+  .floating-content{
+    padding: 2rem 4rem;
+    h2{
+    font-weight:500
+    }
+  }
+  .card-special{
+    margin-bottom:8rem;
+  }
+  
+  @media only screen and (max-width: 991px) {
+  
+    .floating-content{
+      margin:-3rem auto auto;
+      padding:1rem;
+    }
+    .floating-wrapper-left{
+    margin-right:0;
+  }
+
+  .floating-wrapper-right{
+    margin-left:0;
+  }
+  }
+
+.card-large{
+    a{
+        text-decoration: none;
+    }
+    .button{
+        margin: 2rem 0;padding: 1rem 3rem; font-size:1rem;
+    }
+    p{
+        color:#999999;
+    }
+    h2{
+        font-weight:500; 
+        font-size:1.5rem;
+      }
+}
+
+@media #{$device-small} {
+    .card-large{
+        .button{
+            display: none;
+        }
+        h2{
+            font-size:1.1rem;
+          }
+    }
+}
+
+  

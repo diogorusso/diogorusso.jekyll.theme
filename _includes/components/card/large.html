@@ -1,24 +1,9 @@
 
-<style>
-  .card-large-img:before {
-    content: '';
-    display: block;
-}
-.ratio1-1:before {padding-top: 100%;}
-.ratio2-1:before {padding-top: 50%;}
-.ratio4-3:before {padding-top: 75%;}
-.ratio16-9:before {padding-top: 56.25%;}
-.img-content {    
-   position: absolute;
-   height:100%;
-   width:auto;
-   top: 0; left: 50%; bottom: 0; right: 0;
-   transform: translateX(-50%);
-}
-</style>
 {% capture image_single %}
-<div class="card-large-img ratio16-9" style="position:relative; display:inline-block;width:100%;overflow:hidden;">
-    <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{ include.image }}">
+<div class="card-large-img ratio16-9">
+    <a href="{{ include.url }}">
+      <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{ include.image }}">
+    </a>
 </div>
 {% endcapture %}
 
@@ -30,15 +15,17 @@
   <div class="card-large-slider" data-slick='{"autoplaySpeed":5000}'>
       {% for num in (1..count) %}
           {% assign index = num | minus: 1 %}
-          <div class="card-large-img ratio16-9" style="position:relative; display:inline-block;width:100%;overflow:hidden;">
-              {% if imgs[index] contains '.mp4' %}
-                 <video class="img-content" data-poster="/path/to/poster.jpg" width="320" height="240" muted autoplay loop playsinline>
-                    <source data-src="{{imgs[index]}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                  </video>
-                  {% comment %} <video class="img-content" src="{{imgs[index]}}" muted autoplay loop playsinline></video> {% endcomment %}
-              {% else %}
-                  <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{imgs[index]}}">
-              {% endif %}
+          <div class="card-large-img ratio16-9">
+              <a href="{{ include.url }}">
+                {% if imgs[index] contains '.mp4' %}
+                  <video class="img-content" data-poster="/path/to/poster.jpg" width="320" height="240" muted autoplay loop playsinline>
+                      <source data-src="{{imgs[index]}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                    </video>
+                    {% comment %} <video class="img-content" src="{{imgs[index]}}" muted autoplay loop playsinline></video> {% endcomment %}
+                {% else %}
+                    <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{imgs[index]}}">
+                {% endif %}
+              </a>
           </div>
       {% endfor %}
   </div>
@@ -60,22 +47,24 @@
   {% else %}
     <div class="col-xs-12 col-md-4 col-lg-3 last-xs last-sm first-md center-xs start-md">
   {% endif %}
-      <h2 style="font-weight:500; font-size:1.5rem;">{{ include.title }}</h2>
-      {% if include.subtitle != %}
-       <h3>{{ include.subtitle }}</h3>
-      {% endif %}
-      {% if include.categories != %}
-        <p class="author">
-          <span class="date">{{ include.categories }}</span>
-        </p>
-      {% endif%}
-      {% if include.description != %}
-        <div class="content">
-          {{ include.description }}
-        </div>
-      {% endif%}
+      <a href="{{ include.url }}">
+        <h2>{{ include.title }}</h2>
+        {% if include.subtitle != %}
+        <h3>{{ include.subtitle }}</h3>
+        {% endif %}
+        {% if include.categories != %}
+          <p class="author">
+            <span class="date">{{ include.categories }}</span>
+          </p>
+        {% endif%}
+        {% if include.description != %}
+          <div class="content">
+            {{ include.description }}
+          </div>
+        {% endif%}
+      <a href="{{ include.url }}">
       {% if include.url != %}
-        <a href="{{ include.url }}" class="button" style="margin: 2rem 0;padding: 1rem 3rem; font-size:1rem;">
+        <a href="{{ include.url }}" class="button">
           {{include.buttonLabel}}
         </a>
       {% endif%}
@@ -84,7 +73,7 @@
 
 <section class="section-spacing">
   <div class="box">
-    <div class="row middle-sm between-sm">
+    <div class="card-large row middle-sm between-sm">
       {% if include.align == "right" %}
         {{ col_image }}
         {{ col_content }}
