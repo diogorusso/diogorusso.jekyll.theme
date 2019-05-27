@@ -9,44 +9,62 @@ var buffer = require('gulp-buffer');
 var clean = require('gulp-clean');
 
 function cleanJs() {
-    return gulp.src(['assets/script.js'], {
+    return gulp.src(['assets/js/'], {
             read: false
         })
         .pipe(clean());
   }
 
-function js() {
+function jsMain() {
   var jquery = gulp.src('node_modules/jquery/dist/jquery.js');
-  var slickSlider = gulp.src('node_modules/slick-carousel/slick/slick.js');
-  var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.extra.js');
   var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
-  var slickProcess = gulp.src('_includes/content/process/slick.js');
-  var slickLarge = gulp.src('_includes/components/card/large.js');
+  var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.extra.js');
   var lazyScript = gulp.src('_includes/js/lazyLoad.js');
-  var pageScroll = gulp.src('_includes/js/pageScroll.js');
-  var navScript = gulp.src('_includes/components/nav/nav.js');
-  var typeFxScript = gulp.src('_includes/content/bio/typeFx.js');
-  var prototypeScript = gulp.src('_includes/content/prototypes/prototypes.js');
-  var gA = gulp.src('_includes/js/g-analytics.js');
-
+  
   return merge(
         jquery, 
         jQeasing, 
         lazyLoad,
-        slickSlider,
+        lazyScript
+    )
+    .pipe(buffer())
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js/'));  
+}
+
+function jsAbout() {
+  var slickSlider = gulp.src('node_modules/slick-carousel/slick/slick.js');
+  var slickProcess = gulp.src('_includes/content/process/slick.js');
+  var slickLarge = gulp.src('_includes/components/card/large.js');
+  var typeFxScript = gulp.src('_includes/content/bio/typeFx.js');
+  var pageScroll = gulp.src('_includes/js/pageScroll.js');
+  var navScript = gulp.src('_includes/components/nav/nav.js');
+
+  return merge(
         navScript,
         pageScroll,
-        lazyScript, 
+        slickSlider,
         typeFxScript,
         slickProcess,
-        slickLarge,
-        prototypeScript, 
+        slickLarge
+    )
+    .pipe(buffer())
+    .pipe(concat('about.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js/'));  
+}
+
+function jsGA() {
+  var gA = gulp.src('_includes/js/ga.js');
+
+  return merge(
         gA
     )
     .pipe(buffer())
-    .pipe(concat('script.js'))
+    .pipe(concat('ga.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/'));  
+    .pipe(gulp.dest('assets/js/'));  
 }
 
 function jsAnimation(){
@@ -64,7 +82,7 @@ function jsAnimation(){
   .pipe(buffer())
     .pipe(concat('animation.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/'));  
+    .pipe(gulp.dest('assets/js/'));  
 }
 
 function jsInstagram() {
@@ -79,7 +97,7 @@ function jsInstagram() {
     .pipe(buffer())
     .pipe(concat('instagram.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/'));  
+    .pipe(gulp.dest('assets/js/'));  
 }
 
 function jsBehance() {
@@ -92,7 +110,7 @@ function jsBehance() {
     .pipe(buffer())
     .pipe(concat('behance.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/'));  
+    .pipe(gulp.dest('assets/js/'));  
 }
 
 function watch() {
@@ -102,11 +120,12 @@ function watch() {
 
 gulp.task("watch", watch);
 gulp.task("cleanJs", cleanJs);
-gulp.task("js", js);
+gulp.task("jsMain", jsMain);
+gulp.task("jsAbout", jsAbout);
+gulp.task("jsGA", jsGA);
 gulp.task("jsInstagram", jsInstagram);
 gulp.task("jsBehance", jsBehance);
 gulp.task("jsAnimation", jsAnimation);
 
-gulp.task("scripts", gulp.series(cleanJs,js,jsInstagram,jsBehance,jsAnimation));
-
-gulp.task("default", gulp.series(cleanJs,js,jsInstagram,jsBehance,jsAnimation,watch));
+gulp.task("scripts", gulp.series(cleanJs,jsMain,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation));
+gulp.task("default", gulp.series(cleanJs,jsMain,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation,watch));

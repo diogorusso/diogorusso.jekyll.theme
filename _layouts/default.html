@@ -13,16 +13,18 @@
 		{% endcapture %}
 		{{ include_to_scssify | scssify }}
 	</style>  
-  <script src="{{ site.baseurl }}/assets/script.js" async></script>
+  <script src="{{ site.baseurl }}/assets/js/main.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/about.js" defer></script>
   {% if page.scripts contains 'instagram' %}
-    <script src="{{ site.baseurl }}/assets/instagram.js" async></script>
+    <script src="{{ site.baseurl }}/assets/js/instagram.js" defer></script>
   {% endif %}
   {% if page.scripts contains 'behance' %}
-    <script src="{{ site.baseurl }}/assets/behance.js" async></script>
+    <script src="{{ site.baseurl }}/assets/js/behance.js" defer></script>
   {% endif %}
   {% if page.scripts contains 'animation' %}
-    <script src="{{ site.baseurl }}/assets/animation.js" async></script>
+    <script src="{{ site.baseurl }}/assets/js/animation.js" defer></script>
   {% endif %}
+  <script src="{{ site.baseurl }}/assets/js/ga.js" defer></script>
   </body>
 </html>
 
