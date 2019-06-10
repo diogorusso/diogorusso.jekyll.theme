@@ -1,8 +1,9 @@
 
 {% capture image_single %}
-<div class="card-large-img ratio16-9">
+<div class="card-img card-img-shadow ratio16-9">
     <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
-      <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{ include.image }}" alt="{{include.title}}">
+      <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{ include.img }}" alt="{{include.title}}">
+      
     </a>
 </div>
 {% endcapture %}
@@ -15,7 +16,7 @@
   <div class="card-large-slider" data-slick='{"autoplaySpeed":5000}'>
       {% for num in (1..count) %}
           {% assign index = num | minus: 1 %}
-          <div class="card-large-img ratio16-9">
+          <div class="card-img ratio16-9">
               <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
                 {% if imgs[index] contains '.mp4' %}
                   <video class="img-content" data-poster="/path/to/poster.jpg" width="320" height="240" muted autoplay loop playsinline>

@@ -14,7 +14,7 @@
 }
 
 .box{
-    @include box(1140px)    
+    @include box(1240px)    
 }
 
 @media #{$device-small} {

@@ -1,8 +1,12 @@
 <div class="col-xs-12 col-sm-{{include.columns|default:4}} card-wrap">
-  <article class="card card-round" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+  <article class="card" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="{{include.url}}">
-      <img src="{{site.cdn}}work/preloader.svg" data-src="{{ include.image }}">
+      <div class="card-img ratio16-9">
+          <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{include.img}}" alt="{{ site.tile }} {{ include.title }} {{ include.category }}">
+          <noscript><img class="img-content" src="{{include.image}}" alt="{{ site.tile }} {{ include.title }} {{ include.category }}"></noscript>
+      </div>
       <div class="content">
+        <small>{{include.categories}}</small>
         <h3>{{include.title}}</h3>
       </div>
     </a>

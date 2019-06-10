@@ -1,11 +1,10 @@
 
 .section-spacing{
     padding-top: 2rem;
-    padding-bottom: 12rem;
+    padding-bottom: 9rem;
 }
 
-$transition: box-shadow 250ms ease-in-out,
-transform 250ms ease-in-out;
+$card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
 
 .card-wrap{
     padding: 1rem;
@@ -14,14 +13,13 @@ transform 250ms ease-in-out;
     position: relative;
     background: $light;
     box-shadow: 0 15px 25px $mid-light;
-    transition: $transition;
+    transition: $card-transition;
     height:100%;
 
     &:hover {
         transform: translate(0, -20px);
-        transition: $transition;
+        transition: $card-transition;
         box-shadow: 0 45px 45px $card-shadow;
-        transition: $transition;
     }
 
     a {
@@ -29,8 +27,7 @@ transform 250ms ease-in-out;
     }
 
     h3 {
-        margin: 0;
-        margin-bottom:1rem;
+        margin: 1.5rem 0 1rem;
         font-size: 1.5rem;
     }
 
@@ -51,6 +48,11 @@ transform 250ms ease-in-out;
         color: #aaa;
         margin-right: .5rem;
     }
+    small{
+        color: $mid;
+        text-transform: uppercase;
+        font-size: .75rem;
+      }
 
     $grayscale:100%;
     $color:0;
@@ -184,6 +186,16 @@ transform 250ms ease-in-out;
 
 }
 
+.card-img-shadow{
+    box-shadow: 0 15px 25px $mid-2;
+    transition: $card-transition;
+    &:hover {
+      transform: translate(0, -20px);
+      transition: $card-transition;
+      box-shadow: 0 45px 45px $card-shadow;
+  }
+  }
+
 @media #{$device-small} {
     .card-large{
         .button{
@@ -197,4 +209,14 @@ transform 250ms ease-in-out;
     }
 }
 
-  
+@media (hover: none) and (pointer: coarse) {
+    .card {
+        transition: none;
+    
+        &:hover {
+            transform: none;
+            transition: none;
+            box-shadow: 0 15px 25px $mid-light;
+        }
+    }
+}

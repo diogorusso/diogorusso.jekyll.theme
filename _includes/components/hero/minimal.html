@@ -4,14 +4,14 @@
     {% comment %} <div class="hero-post" style="width:100%;height:100%; background: url('./assets/bg-test.jpg');background-repeat: repeat; opacity:0;background-color:#151515;"></div> {% endcomment %}
     <div class="masthead-{{ include.wrap }} {{ include.text_align }} center-content hero-post-box">
         <a href="#{{ include.anchor }}" class="page-scroll {{ include.txt_color }}">
-            <h1 class="title-large {{ include.title_size }}">
+            <h1 class="jumbo">
                 {{ include.title }}
             </h1>
-            <h2>
+            <h2 class="subtitle">
                 {{ include.subtitle }}
             </h2>
             {% if include.legend %}
-            <h3>
+            <h3 class="description">
                 {{ include.legend }}
             </h3>
             {% endif %}

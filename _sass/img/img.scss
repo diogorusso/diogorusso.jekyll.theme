@@ -24,7 +24,7 @@ img {
   to   { opacity: 1; }
 }
 
-.card-large-img:before {
+.card-img:before {
   content: '';
   display: block;
 }
@@ -32,7 +32,7 @@ img {
 $color-base: #ccc;
 $color-highlight: lighten($color-base, 7%);
 
-.card-large-img{
+.card-img{
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
   animation: Gradient 5s ease infinite;
@@ -53,6 +53,8 @@ $color-highlight: lighten($color-base, 7%);
       background-position: 0% 50%
     }
   }
+
+  
   
 
 .ratio1-1:before {padding-top: 100%;}
