@@ -1,8 +1,12 @@
 
 .bio-description{
     text-align: center;
-    margin: 14rem auto;
-    max-width:635px;
+    margin: 12rem 0;
+    h2{
+        max-width:635px;
+        margin: 0 auto 6rem;
+
+    }
 }
 
 .sign-wrap { 
@@ -39,7 +43,7 @@
     }
 
     .bio-description{
-        margin: $gutter*3 auto;
+        margin: $gutter*3 auto $gutter;
     }
     
 
