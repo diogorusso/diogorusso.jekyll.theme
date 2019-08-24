@@ -65,6 +65,24 @@ strong, b{
   font-style: italic;
   font-weight:700;
 }
+
+
+.title{
+  font-size: 3.5rem;
+}
+
+.subtitle{
+  // font-family: $font-sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  margin:0
+}
+.description{
+  font-size: 1.25rem;
+}
+
+
 @media #{$device-medium} {
     .jumbo{
       font-size:4.75rem; 
@@ -77,24 +95,12 @@ strong, b{
       font-size:4rem;
       line-height: 1; 
     }
+    .subtitle{font-size: 2rem;}
+    .description{font-size: 1rem;}
   }
 
 
 
-.title{
-  font-size: 3.5rem;
-}
-
-.subtitle{
-  // font-family: $font-sans-serif;
-  font-size: 2rem;
-  font-weight: 200;
-  font-style: italic;
-  margin:0
-}
-.description{
-  font-size: 1.25rem;
-}
 
 
 @mixin dropcap($drop-lines, $drop-line-height) {
