@@ -3,6 +3,14 @@
     padding: 9rem 0;
 }
 
+
+@media #{$device-medium} {
+  
+    .section-spacing{
+        padding: 3rem 0;
+    }
+  }
+
 $card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
 
 .card-wrap{

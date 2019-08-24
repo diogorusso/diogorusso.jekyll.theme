@@ -74,7 +74,7 @@ strong, b{
 @media #{$device-small} {
   
     .jumbo{
-      font-size:4.75rem;
+      font-size:4rem;
       line-height: 1; 
     }
   }
@@ -87,7 +87,7 @@ strong, b{
 
 .subtitle{
   // font-family: $font-sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
   font-style: italic;
   margin:0
