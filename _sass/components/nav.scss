@@ -57,12 +57,12 @@
 	@include translate(0, -60px);
 }
 
-@media #{$device-small} {
-	.nav {
-		li {
-			// svg{width:44px;}
-			a {padding: 1.1rem .6rem 0 1rem;}
-			.active{border-bottom:none;}
-		}
-	}
-}
+// @media #{$device-small} {
+// 	.nav {
+// 		li {
+// 			svg{width:44px;}
+// 			a {padding: 1.1rem .6rem 0 1rem;}
+// 			.active{border-bottom:none;}
+// 		}
+// 	}
+// }
