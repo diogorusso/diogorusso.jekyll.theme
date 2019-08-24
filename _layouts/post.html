@@ -1,37 +1,83 @@
 ---
 layout: default
 ---
-{% comment %} {% include components/hero/minimal.html
-        title=page.title
-        subtitle= page.category
-        anchor=page.title
-%}
-<a id="{{page.title}}"></a>
-<div class="box">
-    <h1>{{page.title}}</h1>
-    <h3>{{page.category}}</h3>
-    <h3>{{page.link}}</h3>
-    <h3>{{page.date}}</h3>
-    <h3>{{page.description}}</h3>
-    <h3>{{page.tags}}</h3>
-    <h3>{{page.author}}</h3>
-    <img src="{{site.cdn}}work/climate/preloader.svg" data-src="{{site.cdn}}work/projects/{{page.slug}}/cover.jpg">
-    {{content}}
-</div> {% endcomment %}
 
-<div class="box ">
-    <section class="section intro">
-        <h1>{{page.title}}</h1>
-        <div class="metadata">
-            <p>
-                <a href="">Diogo Russo</a>
-            </p>
+    <div class="row row-no-gutter">
+        <div class="col-xs-12">
+            <section class="section intro txt-center">
+                <h1 style="font-size:3rem;font-weight:700; margin:auto;margin-top:9rem;margin-bottom:3rem;max-width:715px">{{page.title}}</h1>
+                <h2 style="font-size:1.75rem;margin:auto;margin-bottom:1.5rem;max-width:660px" class="weight-300">
+                    {{page.intro}}
+                </h2>
+            </section>
         </div>
-    </section>
+        <div class="col-xs-12">
+           <div class="txt-center" style="display: flex;
+                flex-wrap: nowrap;
+                -webkit-box-align: center;
+                align-items: center;
+                flex-direction: row;
+                -webkit-box-pack: center;
+                justify-content: center;
+                margin-bottom:3rem;"
+            >
+                <div style="position: relative;
+                    display: inline-block;
+                    box-shadow: none;
+                    overflow: hidden;"
+                >
+                    <img src="{{ site.cdn }}about/diogo-russo.jpg" style="width: 40px;
+                    height: 40px;
+                    display: block;
+                    -webkit-user-drag: none;
+                    border-radius: 500px;">
+                </div>
+                <div style="text-align: left;
+                    margin-left: 20px;">
+                    <div style="margin-bottom:0.5rem;font-weight:700;">Diogo Russo</div>
+                    <div style="margin-top:0;font-size:.9rem;color:#848484">{{ page.date | date_to_string }}</div>
+                </div>
+                
+            </div>
+        </div>
+        {% if  page.cover  %}
+            <div class="col-xs-12">
+                <div style="margin:auto;max-width:960px; margin-bottom:3rem;">
+                    <div class="card-img ratio16-9">
+                        <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{include.img}}" alt="{{ site.tile }} {{ include.title }} {{ include.category }}">
+                        <noscript><img class="img-content" src="{{include.image}}" alt="{{ site.tile }} {{ include.title }} {{ include.category }}"></noscript>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        
+    </div>
+    <div class="row row-no-gutter">
+        <div class="col-xs-12">
+            <div class="section" style="margin-top:6rem;margin:auto;max-width:715px;font-size:1.2rem;line-height:1.75;">
+                <div class="post-content">
+                    {% if page.details %}
+                        <p class="dropcap">{{page.details}}</p>
+                    {% else %}
+                    {% endif %}
+                    {{content}}
+                </div>
+            </div>
+
+        </div>
+    </div>
     
-    <section class="section">
-        {{content}}
-    </section>
-       
+     
+    
+
+    {% comment %} <section>
+        <div class="metadata" style="">
+            <h3 class="weight-300">
+                {% for category in page.categories  %}
+                    <span style="margin-right:1rem;">{{category}}</span>
+                {% endfor %}
+            </h3>
+        </div>
+    </section> {% endcomment %}
+    
    
-</div>

@@ -1,7 +1,6 @@
 
 .section-spacing{
-    padding-top: 2rem;
-    padding-bottom: 9rem;
+    padding: 9rem 0;
 }
 
 $card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
@@ -29,10 +28,12 @@ $card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
     h3 {
         margin: 1.5rem 0 1rem;
         font-size: 1.5rem;
+        overflow-wrap: break-word;
+        font-weight:700;
     }
 
     p {
-        margin-bottom: $gutter;
+        margin-bottom: $gutter / $gutter;
     }
 
     hr {
@@ -45,7 +46,7 @@ $card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
 
     .tag {
 
-        color: #aaa;
+        color: $mid;
         margin-right: .5rem;
     }
     small{
@@ -130,10 +131,6 @@ $card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
             font-size: 1rem;
         }
     }
-
-    .section-spacing{
-        padding-bottom: $gutter/2;
-    }
 }
 
 .floating-wrapper-left{
@@ -177,11 +174,9 @@ $card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
         margin: 2rem 0;padding: 1rem 3rem; font-size:1rem;
     }
     p{
-        color:#737373;
         font-size: 1.2rem;
     }
     h2{
-        font-weight:500; 
         font-size:1.5rem;
     }
 

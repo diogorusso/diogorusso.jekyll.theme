@@ -3,9 +3,30 @@
   {% include head/_main.html %}
   <body>
     {% include components/nav/nav.html %}
-    <main>
+    
+    {% if page.scripts contains 'isotope' %}
+      {% assign isIsotope=true %}
+    {% else %}
+      {% assign isIsotope=false %}
+    {% endif %}
+
+    {% if page.hasSidebar == true  %}
+      <div class="box sidebar">
+        {% include components/sidebar/sidebar.html 
+            isIsotope=isIsotope
+            title=page.title 
+            list=page.sidebar  
+        %}
+        <main class="main">
+            {{ content}}
+        </main>
+      </div>
+    {% else %}
+      <main>
         {{ content}}
-    </main>
+      </main>
+    {% endif %}
+    
     {% include components/footer/footer.html %}
 	<style>
 		{% capture include_to_scssify %}
@@ -14,7 +35,19 @@
 		{{ include_to_scssify | scssify }}
 	</style>  
   <script src="{{ site.baseurl }}/assets/js/main.js" defer></script>
-  <script src="{{ site.baseurl }}/assets/js/about.js" defer></script>
+
+  {% if page.scripts contains 'isotope' %}
+    <script src="{{ site.baseurl }}/assets/js/isotope.js" defer></script>
+  {% endif %}
+
+  {% if page.scripts contains 'colorFill' %}
+    <script src="{{ site.baseurl }}/assets/js/colorFill.js" defer></script>
+  {% endif %}
+
+  {% if page.scripts contains 'about' %}
+    <script src="{{ site.baseurl }}/assets/js/about.js" defer></script>
+  {% endif %}
+  
   {% if page.scripts contains 'instagram' %}
     <script src="{{ site.baseurl }}/assets/js/instagram.js" defer></script>
   {% endif %}

@@ -2,9 +2,24 @@
   margin-bottom:14rem;
 }
 
+.post-content{
+  p{
+      margin:  0 0 $gutter;
+    }
+}
+
 .posts-title{
   padding: 0 1rem;
   text-align:center;
   max-width:645px;
   margin: 2rem auto 4rem;
+}
+
+.metadata{
+  p{
+      border-left: solid 2px $dark;
+      padding: 0.25rem .75rem;
+  }
+  margin-bottom: $gutter/1.5;
+  // color: $mid;
 }

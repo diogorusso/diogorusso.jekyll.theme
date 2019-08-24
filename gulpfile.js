@@ -20,15 +20,52 @@ function jsMain() {
   var jQeasing = gulp.src('node_modules/jquery.easing/jquery.easing.js');
   var lazyLoad = gulp.src('node_modules/lazyloadxt/dist/jquery.lazyloadxt.extra.js');
   var lazyScript = gulp.src('_includes/js/lazyLoad.js');
+  var pageScroll = gulp.src('_includes/js/pageScroll.js');
+  var navScript = gulp.src('_includes/components/nav/nav.js');
   
   return merge(
         jquery, 
         jQeasing, 
         lazyLoad,
-        lazyScript
+        lazyScript,
+        navScript,
+        pageScroll
     )
     .pipe(buffer())
     .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js/'));  
+}
+
+function jsIsotope(){
+
+  var isotope = gulp.src('node_modules/isotope-layout/dist/isotope.pkgd.min.js');
+  var imagesLoaded = gulp.src('node_modules/imagesloaded/imagesloaded.pkgd.min.js');
+  var packery = gulp.src('node_modules/isotope-packery/packery-mode.pkgd.min.js');
+  var isotopeScript = gulp.src('_includes/js/isotope.js');
+  return merge(
+    isotope,
+    packery,
+    imagesLoaded,
+    isotopeScript
+  )
+  .pipe(buffer())
+  .pipe(concat('isotope.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('assets/js/'));
+
+}
+
+function jsColorFill() {
+  var colorFill = gulp.src('_includes/js/colorFill.js');
+  var colorFillInit = gulp.src('_includes/js/colorFill_init.js');
+  
+  return merge(
+    colorFill,
+    colorFillInit
+    )
+    .pipe(buffer())
+    .pipe(concat('colorFill.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js/'));  
 }
@@ -38,12 +75,9 @@ function jsAbout() {
   var slickProcess = gulp.src('_includes/content/process/slick.js');
   var slickLarge = gulp.src('_includes/components/card/large.js');
   var typeFxScript = gulp.src('_includes/content/bio/typeFx.js');
-  var pageScroll = gulp.src('_includes/js/pageScroll.js');
-  var navScript = gulp.src('_includes/components/nav/nav.js');
+  
 
   return merge(
-        navScript,
-        pageScroll,
         slickSlider,
         typeFxScript,
         slickProcess,
@@ -121,11 +155,13 @@ function watch() {
 gulp.task("watch", watch);
 gulp.task("cleanJs", cleanJs);
 gulp.task("jsMain", jsMain);
+gulp.task("jsIsotope", jsIsotope);
+gulp.task("jsColorFill",jsColorFill);
 gulp.task("jsAbout", jsAbout);
 gulp.task("jsGA", jsGA);
 gulp.task("jsInstagram", jsInstagram);
 gulp.task("jsBehance", jsBehance);
 gulp.task("jsAnimation", jsAnimation);
 
-gulp.task("scripts", gulp.series(cleanJs,jsMain,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation));
-gulp.task("default", gulp.series(cleanJs,jsMain,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation,watch));
+gulp.task("scripts", gulp.series(cleanJs,jsMain,jsIsotope,jsColorFill,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation));
+gulp.task("default", gulp.series(cleanJs,jsMain,jsColorFill,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation,watch));

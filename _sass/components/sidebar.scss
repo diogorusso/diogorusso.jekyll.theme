@@ -1,29 +1,35 @@
 .sidebar {
-  padding-top: 85px;
+  // padding-top: 85px;
   display: flex;
   flex-direction: column;
-  max-width: 1240px;
-  margin:auto;
+  // max-width: 1240px;
+  // margin:auto;
+
+  $sidebar-width: 240px;
+  $sidebar-main-margin: 320px;
   
   .aside {
-    width: 215px;
+    width: $sidebar-width;
+    padding-top:5rem;
+    padding-left:2rem; 
     position: fixed;
     height: 100%;
     display: block;
     overflow: auto;
-    margin-left:45px;
+    // margin-left:45px;
   }
   .main {
+    max-width: 100%;
     flex: 1;
     height: 100%;
     position: relative;
-    margin: 0 25px 25px 285px ;
+    margin: 0 0 0 $sidebar-main-margin ;
   }
   
   @media #{$device-medium-small} {
     .aside { 
       position: relative; 
-      width: 80%;
+      width: 100%;
       margin: auto;
       height: auto;
       .nav-wrap{
@@ -59,7 +65,7 @@
     margin-bottom:calc(#{$gutter} / 2);
     a{
       text-decoration: none;
-      font-weight: 500;
+      display:flex;
       &:hover,
       &:focus {
         text-decoration: none;

@@ -16,15 +16,14 @@
     transition: all 200ms;
   }
   small{
-    bottom: 2.5rem;
+    bottom: $gutter;
     position: absolute;
-    right: 3rem;
+    right: $gutter;
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 400;
     transition: all 200ms;
-    color: #717171;
     // text-transform: uppercase;
-    font-size: 1rem;
+    font-size: $gutter / $gutter;
   }
   &:hover{
     .content-wrapper{background:$dark;transition: all 500ms;}

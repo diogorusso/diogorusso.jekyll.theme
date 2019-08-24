@@ -1,0 +1,19 @@
+<article class="col-xs-12 col-sm-{{include.columns|default:4}}" style="margin-bottom:3rem;">
+    <div class="card" style="max-height: 420px;min-height: 460px;overflow: hidden;padding:1.5rem;">
+        <a href="{{ include.url }}" target="_blank" rel="noopener">
+            {% comment %} <div class="content" style="width:100%;background:#fbfbfb;padding-bottom:1.5rem;">
+                
+                <h3 style="font-size:1.35rem;">{{ include.title }}</h3>
+            </div> {% endcomment %}
+                <div class="card-img ratio4-3">
+                    <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{include.img}}" alt="{{ site.tile }} {{ include.title }} {{ include.categories }}">
+                    <noscript><img class="img-content" src="{{include.img}}" alt="{{ site.tile }} {{ include.title }} {{ include.categories }}"></noscript>
+                </div>
+                <div class="content" style="padding: 1rem 0;">
+                    
+                    <h3 class="weight-400" style="font-size:1.2rem;margin:1rem 0 ;">{{ include.title }}</h3>
+                    {% comment %} <p>{{ include.categories }}</p> {% endcomment %}
+                </div>
+        </a>
+    </div>
+</article>

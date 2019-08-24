@@ -1,18 +1,22 @@
-<nav class="aside">
+<aside class="aside">
     <div class="nav-wrap">
-        <div class="list">
-            <h2>
-                {{ site.sidebar_title }}
-            </h2>
-            <ul id="filter" class="filters">
-                {% for item in site.sidebar_items %}
-                    <li >
-                        <a href="{{ item.url }}">
-                            {{ item.title }}
-                        </a>
-                    </li>
-                {% endfor%}
-            </ul>
+        <div id="filter" class="list filters">
+            {% if include/title != "" %}
+                    <h2>
+                    {{ include.title }}
+                    </h2>
+                {% endif %}    
+            <ul class="filter-list" data-filter-group="category">
+                    {% assign list = include.list | split: "| " %}
+                    {% for item in list  %}
+                        {% assign item_info = item | split: ", " %}
+                        {% if isIsotope == true %}
+                            <li><a class="weight-300" href="javascript:void(0)" data-filter=".{{item_info[1]}}">{{item_info[0]}}</a></li>
+                        {% else %}
+                            <li><a class="weight-300" href="{{site.baseurl}}/{{item_info[1]}}">{{item_info[0]}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+            </ul><!-- .subject -->
         </div>
     </div>
-</nav>
+</aside>

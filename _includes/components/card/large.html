@@ -48,7 +48,7 @@
     <div class="col-xs-12 col-md-4 col-lg-3 last-xs last-sm first-md center-xs start-md">
   {% endif %}
       <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
-        <h2>{{ include.title }}</h2>
+        <h2 class="weight-700">{{ include.title }}</h2>
         {% if include.subtitle != %}
         <h3>{{ include.subtitle }}</h3>
         {% endif %}
@@ -70,7 +70,7 @@
   </div>
 {% endcapture %}
 
-<section class="section-spacing">
+<section class="section-spacing" >
   <div class="box">
     <div class="card-large row middle-sm between-sm">
       {% if include.align == "right" %}

@@ -36,13 +36,15 @@
 
 //Containers
 @import "components/nav";
+@import "components/nav-resp";
 @import "components/hero";
 @import "components/box";
 @import "components/sidebar";
 
-
 // Content
+@import "components/isotope";
 @import "content/process";
+
 
 // Prototypes
 @import "content/prototypes";
@@ -52,3 +54,4 @@
 
 // AOS
 // @import "vendor/aos";
+

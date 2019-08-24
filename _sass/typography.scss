@@ -1,21 +1,39 @@
 
 h1, h2, h3 {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25;
 }
 
-h1{
-  font-family:$font-serif;
+
+.weight-200{
+  font-weight: 200;
 }
 
-h2{
-  font-family:$font-serif;
-  font-size: 1.85rem;
+.weight-300{
+  font-weight: 300;
 }
 
-h3{
-  font-size: 1.35rem;
+.weight-400{
+  font-weight: 400;
 }
+
+.weight-700{
+  font-weight: 700;
+}
+
+
+// h1{
+//   font-family:$font-serif;
+// }
+
+// h2{
+//   font-family:$font-serif;
+//   font-size: 1.85rem;
+// }
+
+// h3{
+//   font-size: 1.35rem;
+// }
 
 ul {
   margin-top: 0;
@@ -32,24 +50,68 @@ a {
   
 // }
 
+
+// p{
+//   margin:  0 0 $gutter;
+// }
+
 strong, b{
   font-weight: 400;
 }
 
 .jumbo{
-  font-size:5.4rem;
-  margin-bottom:1rem; 
+  font-size:6rem;
+  margin:0 0 .5rem; 
+  font-style: italic;
+  font-weight:700;
+}
+@media #{$device-medium} {
+    .jumbo{
+      font-size:4.75rem; 
+    }
 }
 
+@media #{$device-small} {
+  
+    .jumbo{
+      font-size:4.75rem;
+      line-height: 1; 
+    }
+  }
+
+
+
 .title{
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .subtitle{
-  font-family: $font-sans-serif;
-  font-size: 2.25rem;
+  // font-family: $font-sans-serif;
+  font-size: 2.5rem;
   font-weight: 200;
+  font-style: italic;
+  margin:0
 }
 .description{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+
+@mixin dropcap($drop-lines, $drop-line-height) {
+  $drop-size : $drop-line-height * $drop-lines;
+  &::first-letter {
+    text-transform: uppercase;
+    font-size: #{$drop-size+'em'};
+    vertical-align: bottom;
+    font-weight:700;
+    float: left;
+    line-height: 1;
+    margin-right: 0.2em;
+    margin-left: -0.05em;
+    margin-top: 0.1em;
+  }
+}
+.dropcap {
+  @include dropcap(2, 1.5);
+  
 }

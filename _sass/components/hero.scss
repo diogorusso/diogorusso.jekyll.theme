@@ -23,6 +23,7 @@
 
 .bg-dark{
   background:$dark;
+  // @include AboutBg();
 }
 
 .bg-light{
@@ -30,8 +31,8 @@
 }
 
 .txt-light{
-
-  color: $light;
+  color:#c1c1c1;
+  // color: $light;
 }
 
 .txt-center{
@@ -44,23 +45,23 @@
 
 .masthead{
   height:100vh;
-  width: 100%; 
-  display: flex;
-  overflow: hidden;
-  position: relative;
+  // width: 100%; 
+  // display: flex;
+  // overflow: hidden;
+  // position: relative;
   z-index: 1;
 
-  .masthead-wrap{
-    padding: 0 1rem;
-    max-width: 575px;
+  // .masthead-wrap{
+  //   padding: 0 1rem;
+  //   max-width: 575px;
 
-  }
+  // }
 
-  .masthead-wrap-large{
-    padding: 0 1rem;
-    max-width: 630px;
+  // .masthead-wrap-large{
+  //   padding: 0 1rem;
+  //   max-width: 655px;
 
-  }
+  // }
   
   a{
     text-decoration: none;
@@ -84,48 +85,32 @@
   z-index: 3;
 }
 
-.center-content{
-  width:75%;
-  z-index: 2;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  @include translate(-50%, -50%);
-}
+// .center-content{
+//   width:75%;
+//   z-index: 2;
+//   position: absolute;
+//   left: 50%;
+//   top: 45%;
+//   @include translate(-50%, -50%);
+// }
 
-@media #{$device-medium} {
-  .masthead{
-    .jumbo{
-      font-size:4.75rem; 
-    }
-    h2{
-      font-size:2.5rem;
-    }
-  }
-}
+
 
 
 @media #{$device-small} {
   .masthead{
     height: auto;
     text-align: center;
-    h1{
-      font-size: 3rem;
-    }
-  
+
     h2{
-      font-size: 1.7rem;
+      font-size: 3rem;
       font-weight: 200;
       margin: 3rem auto;
     }
     h3{
-      font-size: 1.25rem;
-      max-width: 16rem;
+      font-size: 1.5rem;
+      max-width: 24rem;
       margin: auto;
-    }
-    .jumbo{
-      font-size:4rem;
-      line-height: 1; 
     }
   }
 
@@ -144,33 +129,3 @@
     margin: 6rem auto 9rem;
   }
 }
-
-
-// @media #{$device-small-landscape} {
-//   .center-content{
-//     width:90%;
-//     top:45%;
-//   }
-//   .masthead{
-//     text-align: center;
-//     h1{
-//       font-size: 1.5rem;
-//     }
-  
-//     h2{
-//       font-size: 1.25rem;
-//     }
-//     h3{
-//       font-size: 1rem;
-//     }
-//     .jumbo{
-//       font-size:1.85rem;
-//       margin-bottom:.5rem;
-//     }
-//   }
-//   .arrow-wrap{
-//     position:absolute; 
-//     bottom:2.15rem; 
-//   }
-
-// }

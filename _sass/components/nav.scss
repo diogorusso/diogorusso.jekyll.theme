@@ -47,14 +47,22 @@
 
 .is-hidden {
 	@include translate(0, -100%);
-  }
+	}
+	
+	.is-hidden-cancel {
+		transform: none;
+		}
 
 .slide-up {
 	@include translate(0, -60px);
 }
 
-@media #{$device-x-small} {
-	.nav li a {
-		padding: 1.1rem .6rem 0 1rem;
+@media #{$device-small} {
+	.nav {
+		li {
+			svg{width:44px;}
+			a {padding: 1.1rem .6rem 0 1rem;}
+			.active{border-bottom:none;}
+		}
 	}
 }

@@ -1,24 +1,23 @@
 
 
-<header class="masthead {{ include.bg_color }}">
-    {% comment %} <div class="hero-post" style="width:100%;height:100%; background: url('./assets/bg-test.jpg');background-repeat: repeat; opacity:0;background-color:#151515;"></div> {% endcomment %}
-    <div class="masthead-{{ include.wrap }} {{ include.text_align }} center-content hero-post-box">
-        <a href="#{{ include.anchor }}" class="page-scroll {{ include.txt_color }}">
+<header class="row row-no-gutter middle-xs around-xs masthead {{ include.bg_color }}">
+    <div class="col-xs-10 col-sm-8 col-md-6 {{ include.text_align }} hero-post-box">
+        <a href="#{{ include.anchor }}" class="page-scroll {{ include.txt_color }} {{ include.txt_align }}">
             <h1 class="jumbo">
                 {{ include.title }}
             </h1>
-            <h2 class="subtitle">
+            <h2 class="subtitle weight-300">
                 {{ include.subtitle }}
             </h2>
             {% if include.legend %}
-            <h3 class="description">
+            <h3 class="description weight-300">
                 {{ include.legend }}
             </h3>
             {% endif %}
         </a>
     </div>
     {% if include.scroll_arrow == "true"  %}
-        <div class="arrow-wrap"> 
+        <div class="arrow-wrap hide-sm"> 
             <a href="#{{ include.anchor }}" class="page-scroll">
                 <span id="scroll-arrow">👇</span>
             </a>

@@ -1,0 +1,75 @@
+
+$gutter: 2rem;
+
+.gutter-sizer { width: $gutter; }
+
+.grid-sizer-3,
+.grid-item-3 { 
+  float: left;
+  width: calc(33% - #{$gutter}); margin-bottom:3rem;
+}
+
+.grid-sizer-2,
+.grid-item-2 { 
+  float: left;
+  width: calc(50% - #{$gutter}); margin-bottom:3rem;
+}
+
+@mixin grid-2($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+.checked:after {
+  content: "";
+  background-color:$dark;
+  display:block;
+  // background: url("icon.jpg") no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-left: $gutter/2;
+}
+
+
+@media (min-width: 960px) and (max-width: 1200px) {
+    .grid-sizer-2,
+    .grid-item-2,
+    .grid-sizer-3,
+    .grid-item-3 { width: calc(50% - #{$gutter}); }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+    .grid-sizer-2,
+    .grid-item-2,
+    .grid-sizer-3,
+    .grid-item-3 { width: calc(50% - #{$gutter}); }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .grid-sizer-2,
+    .grid-item-2,
+    .grid-sizer-3,
+    .grid-item-3 { width: calc(50% - #{$gutter}); }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+  .grid-sizer-2,
+  .grid-item-2,
+  .grid-sizer-3,
+  .grid-item-3 { width: 100%; }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .grid-sizer-2,
+  .grid-item-2,
+  .grid-sizer-3,
+  .grid-item-3 { width: 100%; }
+}
+
+@media (max-width: 319px) {
+  .grid-sizer-2,
+  .grid-item-2,
+  .grid-sizer-3,
+  .grid-item-3 { width: 100%; }
+}
