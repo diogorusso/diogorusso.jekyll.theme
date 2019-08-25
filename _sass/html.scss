@@ -9,6 +9,7 @@ html {
   font-family: $font-sans-serif;
   color: $dark;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   line-height: normal;
 }
