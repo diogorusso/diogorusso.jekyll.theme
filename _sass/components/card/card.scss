@@ -178,6 +178,8 @@ $card-transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
     }
     p{
         font-size: 1.2rem;
+        max-width:380px;
+        margin: auto;
     }
     h2{
         font-size:1.5rem;
