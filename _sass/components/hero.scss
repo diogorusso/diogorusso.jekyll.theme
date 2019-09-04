@@ -157,6 +157,7 @@
     transform: translateX(-100%);
     animation: secondaryImageOverlayIn 0.6s 0s, secondaryImageOverlayOut 0.6s 0.6s;
     animation-fill-mode: both;
+    padding-left: 1px;
   }
   
 }
@@ -196,6 +197,7 @@
     transform: translateX(-100%);
     animation: secondaryImageOverlayIn 0.8s 0s, secondaryImageOverlayOut 0.8s 0.8s;
     animation-fill-mode: both;
+    padding-left: 1px;
   }
   
 }
@@ -212,9 +214,11 @@
 @keyframes secondaryImageOverlayIn {
   0% {
     width: 0;
+    opacity: 0;
   }
   100% {
     width: 100%;
+    opacity: 1;
   }
 }
 
