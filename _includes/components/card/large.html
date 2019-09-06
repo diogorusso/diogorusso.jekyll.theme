@@ -2,7 +2,7 @@
 {% capture image_single %}
 <div class="card-img card-img-shadow ratio16-9">
     <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
-      <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{ include.img }}" alt="{{include.title}}">  
+      <img class="img-content" src="{% include img/base64/loader.html %}" data-src="{{ include.img }}" alt="{{include.title}}">  
     </a>
 </div>
 {% endcapture %}
@@ -23,7 +23,7 @@
                     </video>
                     {% comment %} <video class="img-content" src="{{imgs[index]}}" muted autoplay loop playsinline></video> {% endcomment %}
                 {% else %}
-                    <img class="img-content" src="{% include img/base64/transparent.html %}" data-src="{{imgs[index]}}" alt="{{include.title}}">
+                    <img class="img-content" src="{% include img/base64/loader.html %}" data-src="{{imgs[index]}}" alt="{{include.title}}">
                 {% endif %}
               </a>
           </div>

@@ -33,9 +33,9 @@ $color-base: #ccc;
 $color-highlight: lighten($color-base, 7%);
 
 .card-img{
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-  background-size: 400% 400%;
-  animation: Gradient 5s ease infinite;
+  // background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  // background-size: 400% 400%;
+  // animation: Gradient 5s ease infinite;
   position:relative; 
   display:inline-block;
   width:100%;

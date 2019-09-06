@@ -79,7 +79,7 @@ strong, b{
   margin:0
 }
 .description{
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 
@@ -124,4 +124,16 @@ strong, b{
 .dropcap {
   @include dropcap(2, 1.5);
   
+}
+
+
+.squiggle{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-svg' viewBox='0 0 20 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='black' stroke-width='2' class='st0' d='M0 4c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E");
+  border-bottom: none;
+  border-top-width: 1px;
+  background-position: 0 calc(100% - 2.5px);
+  background-size: auto .5rem;
+  background-repeat: repeat-x;
+  padding-bottom: 32px;
+  display: inline-block;
 }

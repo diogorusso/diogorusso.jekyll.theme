@@ -1,0 +1,23 @@
+<div class="row row-no-gutter middle-xs around-xs masthead {{ include.bg_color }}">
+    <div class="col-xs-10 col-sm-8 col-lg-6 {{ include.text_align }} masthead-content">
+        <a href="#{{ include.anchor }}" class="page-scroll {{ include.txt_color }} {{ include.txt_align }}">
+            <h1 class="jumbo header-animation">
+                <div class="anima">{{ include.title }}</div>
+            </h1>
+            <h2 class="subtitle weight-300 header-animation-2">
+                <span class="anima-2">{{ include.subtitle }}</span>
+            </h2>
+            {% if include.legend %}
+            <h3 class="description weight-300 header-animation">
+                <span class="anima">{{ include.legend }}</span>
+            </h3>
+            {% endif %}
+        </a>
+    </div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+</div>
