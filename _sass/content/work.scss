@@ -1,8 +1,8 @@
 .portfolio-title{
   padding: 0 1rem;
   text-align:center;
-  max-width:695px;
-  margin: 9rem auto 6rem;
+  max-width:535px;
+  margin: 6rem auto 3rem;
   h2{
     margin-top:6rem;
   }
@@ -15,8 +15,8 @@
   }
 }
 
-@media #{$device-medium-small} {
-  .portfolio-title{
-    margin: $gutter*1.5 auto $gutter;
-  }
-}
+// @media #{$device-medium-small} {
+//   .portfolio-title{
+//     margin: $gutter*1.5 auto $gutter;
+//   }
+// }

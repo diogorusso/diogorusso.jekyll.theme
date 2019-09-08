@@ -134,6 +134,18 @@ function jsInstagram() {
     .pipe(gulp.dest('assets/js/'));  
 }
 
+function jsDribbble() {
+  var dribbble = gulp.src('_includes/api/dribbble/dribbble.js');
+
+  return merge(
+        dribbble
+    )
+    .pipe(buffer())
+    .pipe(concat('dribbble.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js/'));  
+}
+
 function jsBehance() {
   var mustache = gulp.src('node_modules/mustache/mustache.js');
   var behanceProjects = gulp.src('_includes/api/behance/behanceProjects.js');
@@ -162,6 +174,7 @@ gulp.task("jsGA", jsGA);
 gulp.task("jsInstagram", jsInstagram);
 gulp.task("jsBehance", jsBehance);
 gulp.task("jsAnimation", jsAnimation);
+gulp.task("jsDribbble",jsDribbble);
 
-gulp.task("scripts", gulp.series(cleanJs,jsMain,jsIsotope,jsColorFill,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation));
-gulp.task("default", gulp.series(cleanJs,jsMain,jsColorFill,jsAbout,jsGA,jsInstagram,jsBehance,jsAnimation,watch));
+gulp.task("scripts", gulp.series(cleanJs,jsMain,jsIsotope,jsColorFill,jsAbout,jsGA,jsInstagram,jsDribbble,jsBehance,jsAnimation));
+gulp.task("default", gulp.series(cleanJs,jsMain,jsColorFill,jsAbout,jsGA,jsInstagram,jsDribbble,jsBehance,jsAnimation,watch));

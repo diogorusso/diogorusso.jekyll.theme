@@ -10,7 +10,7 @@ $.ajax({
       if (data.length > 0) { 
         $.each(data.reverse(), function(i, val) {                
           $('#shots').prepend(
-            '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></a>'
+            '<div class="col-xs-6 col-md-4"><div class="card"><a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></a></div></div>'
             )
         })
       }
@@ -19,7 +19,7 @@ $.ajax({
       }
     }
 });
-
+console.log('dribbble')
 
 // API Variables
 
