@@ -12,7 +12,7 @@
 {% capture image_slider %}
   {% assign imgs = include.img | split: ',' %}
   {% assign count = imgs | size  %}
-  <div class="card-large-slider" data-slick='{"autoplaySpeed":5000}'>
+  <div class="card-large-slider" data-slick='{"autoplaySpeed":3000}'>
       {% for num in (1..count) %}
           {% assign index = num | minus: 1 %}
           <div class="card-img ratio16-9">
