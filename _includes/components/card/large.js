@@ -4,8 +4,8 @@ jQuery(document).ready(function($) {
     $('.card-large-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        fade: true,
+        arrows: true,
+        // fade: true,
         autoplay:true,
         autoplaySpeed:2000,
         // infinite: false,

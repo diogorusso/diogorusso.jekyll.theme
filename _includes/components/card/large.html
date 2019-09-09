@@ -16,7 +16,6 @@
       {% for num in (1..count) %}
           {% assign index = num | minus: 1 %}
           <div class="card-img ratio16-9">
-              <a href="{{ include.url }}" aria-label="{{include.title}}" target="_blank" rel="noopener noreferrer">
                 {% if imgs[index] contains '.mp4' %}
                   <video class="img-content" data-poster="/path/to/poster.jpg" width="320" height="240" muted autoplay loop playsinline>
                       <source data-src="{{imgs[index]}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -25,7 +24,6 @@
                 {% else %}
                     <img class="img-content" src="{% include img/base64/loader.html %}" data-src="{{imgs[index]}}" alt="{{include.title}}">
                 {% endif %}
-              </a>
           </div>
       {% endfor %}
   </div>
