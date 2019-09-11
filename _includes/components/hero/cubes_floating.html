@@ -1,4 +1,4 @@
-<header class="row row-no-gutter middle-xs around-xs masthead {{ include.bg_color }}">
+<div class="row row-no-gutter middle-xs around-xs masthead {{ include.bg_color }}">
     <div class="col-xs-10 col-sm-8 col-lg-6 {{ include.text_align }} masthead-content">
         <a href="#{{ include.anchor }}" class="page-scroll {{ include.txt_color }} {{ include.txt_align }}">
             <h1 class="jumbo header-animation">
@@ -14,12 +14,10 @@
             {% endif %}
         </a>
     </div>
-    {% if include.scroll_arrow == "true"  %}
-        <div class="arrow-wrap hide-sm"> 
-            <a href="#{{ include.anchor }}" class="page-scroll">
-                <span id="scroll-arrow">👇</span>
-            </a>
-        </div>
-    {% endif %}
-    
-</header>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+</div>
