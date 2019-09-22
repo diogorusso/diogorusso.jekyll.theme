@@ -36,6 +36,11 @@
 }
 
 
+@media #{$device-medium} {
+    .sign{
+        padding: 2rem 0;
+    }
+}
 
 @media #{$device-small} {
     .bio{
