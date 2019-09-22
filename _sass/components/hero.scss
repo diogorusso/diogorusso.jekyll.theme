@@ -22,12 +22,14 @@
 
 
 .bg-dark{
-  background:$dark;
-  // @include AboutBg();
+  // background:$dark;
+	// @include AboutBg();
+	background: linear-gradient(141deg, #292828 25%, #292828 40%, #1d1d1d 55%);
 }
 
 .bg-light{
-  background:$light;
+	// background:$light;
+	background: linear-gradient(141deg, #dedddd 25%, #fcfcfc 40%, #fff 55%);
 }
 
 .txt-light{
@@ -44,7 +46,7 @@
 }
 
 .masthead{
-  height:100vh;
+  min-height:100vh;
   // width: 100%; 
   // display: flex;
   // overflow: hidden;

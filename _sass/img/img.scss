@@ -63,7 +63,7 @@ $color-highlight: lighten($color-base, 7%);
 .ratio16-9:before {padding-top: 56.25%;}
 .img-content {    
    position: absolute;
-   width:auto;
+   width:100%;
    height:calc(100% + 2px);
    top: 0; left: 50%; bottom: 0; right: 0;
    transform: translateX(-50%);

@@ -1,5 +1,11 @@
 <header class="row row-no-gutter middle-xs around-xs masthead {{ include.bg_color }}">
-       <div class="col-xs-10 col-sm-8 col-lg-6 {{ include.text_align }} masthead-content">
+    <div style="position:absolute;width:100%;height:100%; opacity:.05">
+    <video class="img-content"style="object-fit: cover;max-height:100%;max-width:100%"  data-poster="/path/to/poster.jpg" width="320" height="240" preload="auto" autoplay loop muted="muted" playsinline>
+            <source data-src="{{ site.cdn }}{{ include.version }}work26.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+          </video>
+    </div>
+
+    <div class="col-xs-10 col-sm-8 col-lg-6 {{ include.text_align }} masthead-content" style="z-index:9">
         <a href="#{{ include.anchor }}" class="page-scroll {{ include.txt_color }} {{ include.txt_align }}">
             <h1 class="jumbo">
                 {{ include.title }}
@@ -8,7 +14,7 @@
                 {{ include.subtitle }}
             </h2>
             {% if include.legend %}
-            <h3 class="description">
+            <h3 class="description weight-300">
                 {{ include.legend }}
             </h3>
             {% endif %}

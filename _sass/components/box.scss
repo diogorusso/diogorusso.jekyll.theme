@@ -17,6 +17,13 @@
     @include box(1240px)    
 }
 
+@media #{$device-large} {
+    .box{
+        padding: 0 1rem;
+        max-width:1024px;
+    }
+}
+
 @media #{$device-small} {
     .box{
         padding: 0 1rem;
