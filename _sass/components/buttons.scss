@@ -20,6 +20,18 @@
     }
   }
 
+  .button-filled{
+    background: $dark;
+    color: $light;
+    border: $dark solid 2px;
+    &:hover{
+      background-color: $light;
+      color: $dark;
+      border: solid 2px $dark;
+      
+    }
+  }
+
   .btns-social{
     margin: 3rem 0;
     a{
