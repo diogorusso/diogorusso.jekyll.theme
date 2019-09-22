@@ -17,9 +17,17 @@
   }
 }
 
+.portfolio-title-intro{
+  margin: 9rem auto 3rem;
+}
+
 @media #{$device-medium-small} {
   .portfolio-title{
     h1{font-size:2.25rem;}
+    margin: 3rem auto 3rem;
+  }
+  .portfolio-title-intro{
+    margin: 6rem auto 3rem;
   }
 }
 
