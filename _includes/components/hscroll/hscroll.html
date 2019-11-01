@@ -1,0 +1,107 @@
+<section class="section-spacing txt-center" style="background:#f3f3f3; margin-top:6rem ">
+ <div class="row portfolio-title" style="margin: 3rem auto 3rem">
+        <div class="col-xs-12">
+                <h1 style="font-size:2.5rem;">Open Notes</h1>
+            
+        </div>
+</div>
+ {% comment %} <svg style="background-color:#aaa;" width="0" height="0">
+    <defs>
+      <path id="scrollArrow" d="M -20,0 L 20 -50, 10 0, 20 50 Z"/>
+    </defs>
+<!--
+    <g transform="translate(60,60)">
+      <use xlink:href="#scrollArrow" />
+      <circle cx="0" cy="0" r="4" fill="red"/>
+    </g>
+    <rect width="100" height="100" x="10" y="10" stroke="#fff" fill="none" stroke-width="2"/> -->
+  </svg> {% endcomment %}
+
+  {% comment %} <div class="print" id="print-menu-position"><span></span> Scroll position</div> {% endcomment %}
+
+  <div id="widthControlled" class="gallery-row small">
+    <div id="scroller" class="gallery-row-scroll">
+      <div class="border-left hide"></div>
+      <article class="item">
+        <div class="card card-round" style="background:#151515; max-width:295px;">
+        <a class="shot" style="color:#fbfbfb;" target="_blank" href="{{include.url}}" title="{{include.title}}">
+          <img src="{{ site.cdn}}{{ include.version }}art.jpg"/>
+          <div style="padding:1rem;">
+          Artwork
+          </div>
+        </a>
+      </div>
+      </article>
+      <article class="item">
+        <div class="card card-round" style="background:#151515; max-width:295px;">
+        <a class="shot" style="color:#fbfbfb;" target="_blank" href="{{include.url}}" title="{{include.title}}">
+          <img src="{{ site.cdn}}{{ include.version }}not.jpg"/>
+          <div style="padding:1rem;">
+          Artwork
+          </div>
+        </a>
+      </div>
+      </article>
+      <article class="item">
+        <div class="card card-round" style="background:#151515; max-width:295px;">
+        <a class="shot" style="color:#fbfbfb;" target="_blank" href="{{include.url}}" title="{{include.title}}">
+          <img src="{{ site.cdn}}{{ include.version }}strat.jpg"/>
+          <div style="padding:1rem;">
+          Artwork
+          </div>
+        </a>
+      </div>
+      </article>
+      <article class="item">
+        <div class="card card-round" style="background:#151515; max-width:295px;">
+        <a class="shot" style="color:#fbfbfb;" target="_blank" href="{{include.url}}" title="{{include.title}}">
+          <img src="{{ site.cdn}}{{ include.version }}not.jpg"/>
+          <div style="padding:1rem;">
+          Artwork
+          </div>
+        </a>
+      </div>
+      </article>
+      <article class="item">
+        <div class="card card-round" style="background:#151515; max-width:295px;">
+        <a class="shot" style="color:#fbfbfb;" target="_blank" href="{{include.url}}" title="{{include.title}}">
+          <img src="{{ site.cdn}}{{ include.version }}strat.jpg"/>
+          <div style="padding:1rem;">
+          Artwork
+          </div>
+        </a>
+      </div>
+      </article>
+      <article class="item">
+        <div class="card card-round" style="background:#151515; max-width:295px;">
+        <a class="shot" style="color:#fbfbfb;" target="_blank" href="{{include.url}}" title="{{include.title}}">
+          <img src="{{ site.cdn}}{{ include.version }}code.jpg"/>
+          <div style="padding:1rem;">
+          Artwork
+          </div>
+        </a>
+      </div>
+      </article>
+      <article class="item">
+        <div class="card card-round" style="background:#151515; max-width:295px;">
+        <a class="shot" style="color:#fbfbfb;" target="_blank" href="{{include.url}}" title="{{include.title}}">
+          <img src="{{ site.cdn}}{{ include.version }}art.jpg"/>
+          <div style="padding:1rem;">
+          Artwork
+          </div>
+        </a>
+      </div>
+      </article>
+      <div class="border-right"></div>
+    </div>
+
+    <div class="arrow left left-paddle hide hide-sm">
+     ◀ {% comment %} <use xlink:href="#scrollArrow" style="fill:#151515" transform="translate(50,50)"/> {% endcomment %}
+    </div>
+
+    <div class="arrow right right-paddle hide-sm">
+      ▶ {% comment %} <use xlink:href="#scrollArrow" style="fill:#151515" transform="translate(50,50) rotate(180)"/> {% endcomment %}
+    </div>
+  </div>
+  <a href="" style="margin-top:3rem;" class="button button-filled" target="_blank" rel="noopener">View All Posts</a>
+  </section>

@@ -20,6 +20,29 @@
     }
   }
 
+  .button-light{
+    border: $light solid 1px;
+    color: $light;
+    &:hover{
+      background-color: $light;
+      color: $dark;
+      border: solid 1px $light;
+      
+    }
+  }
+
+  .button-filled-light{
+    background: $light;
+    color: $dark;
+    border: $light solid 1px;
+    &:hover{
+      background-color: $light;
+      color: $dark;
+      border: solid 1px $dark;
+      
+    }
+  }
+
   .button-filled{
     background: $dark;
     color: $light;

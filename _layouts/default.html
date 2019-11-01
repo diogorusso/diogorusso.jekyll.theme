@@ -44,6 +44,10 @@
     <script src="{{ site.baseurl }}/assets/js/colorFill.js" defer></script>
   {% endif %}
 
+  {% if page.scripts contains 'hscroll' %}
+    <script src="{{ site.baseurl }}/assets/js/hscroll.js" defer></script>
+  {% endif %}
+
   {% if page.scripts contains 'about' %}
     <script src="{{ site.baseurl }}/assets/js/about.js" defer></script>
   {% endif %}

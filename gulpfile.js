@@ -70,6 +70,18 @@ function jsColorFill() {
     .pipe(gulp.dest('assets/js/'));  
 }
 
+function jsHscroll() {
+  var hScroll = gulp.src('_includes/components/hscroll/hscroll.js');
+ 
+  return merge(
+    hScroll
+    )
+    .pipe(buffer())
+    .pipe(concat('hscroll.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js/'));  
+}
+
 function jsAbout() {
   var slickSlider = gulp.src('node_modules/slick-carousel/slick/slick.js');
   var slickProcess = gulp.src('_includes/content/process/slick.js');
@@ -175,6 +187,7 @@ gulp.task("jsInstagram", jsInstagram);
 gulp.task("jsBehance", jsBehance);
 gulp.task("jsAnimation", jsAnimation);
 gulp.task("jsDribbble",jsDribbble);
+gulp.task("jsHscroll", jsHscroll);
 
-gulp.task("scripts", gulp.series(cleanJs,jsMain,jsIsotope,jsColorFill,jsAbout,jsGA,jsInstagram,jsDribbble,jsBehance,jsAnimation));
-gulp.task("default", gulp.series(cleanJs,jsMain,jsColorFill,jsAbout,jsGA,jsInstagram,jsDribbble,jsBehance,jsAnimation,watch));
+gulp.task("scripts", gulp.series(cleanJs,jsMain,jsIsotope,jsColorFill,jsAbout,jsGA,jsInstagram,jsDribbble,jsBehance,jsAnimation,jsHscroll));
+gulp.task("default", gulp.series(cleanJs,jsMain,jsColorFill,jsAbout,jsGA,jsInstagram,jsDribbble,jsBehance,jsAnimation,jsHscroll,watch));
