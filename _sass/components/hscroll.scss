@@ -208,3 +208,14 @@ html.touchevents .gallery-row svg{
   height:221px;
   width:auto;
 }
+
+@media #{$device-small} {
+  .item{
+    width:200px;
+  }
+
+  .gallery-row.small img{
+    height:165px;
+  }
+
+}
