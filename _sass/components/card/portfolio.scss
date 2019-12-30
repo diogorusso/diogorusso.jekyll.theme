@@ -1,53 +1,56 @@
-
-.portfolio-item{
-    position: relative;
-    margin-bottom:3rem;
-    padding:0;
-    a {
-        text-decoration: none;
+.portfolio-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 0;
+  a {
+    text-decoration: none;
+  }
+  .content {
+    // text-align: center;
+    padding-top: 1.5rem;
+    h3 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.2rem;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0.75rem;
+      font-weight: 700;
     }
-    .content {
-        padding: calc(#{$gutter} / 2);
-        text-align: center;
-        h3{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 1.2rem;
-            -webkit-margin-before: 0;
-            -webkit-margin-after: .75rem;
-            font-weight: 700;
-        }
-        p{
-            // text-transform: uppercase;
-            font-size: 1.2rem;
-            max-width:280px;
-            margin: 0 auto;
-        }
+    p {
+      // text-transform: uppercase;
+      font-size: 1.2rem;
+      //   margin: 0 auto;
     }
-
+  }
 }
 
-.more-projects{
-    text-align: center;
+@media #{$device-large} {
+  .portfolio-item .content {
+    max-width: 80%;
+    margin: auto;
+  }
 }
 
+.more-projects {
+  text-align: center;
+}
 
-    $grayscale:0;
-    $color:100%;
-    $no-blur:0;
-    $blur:100%;
-    $saturation:100%;
-    $no-saturation:0;
+$grayscale: 0;
+$color: 100%;
+$no-blur: 0;
+$blur: 100%;
+$saturation: 100%;
+$no-saturation: 0;
 
-    .desaturated{
-        -webkit-filter: grayscale($grayscale) blur($no-blur) saturate($saturation);
-        filter: grayscale($grayscale) blur($no-blur) saturate($saturation);
+.desaturated {
+  -webkit-filter: grayscale($grayscale) blur($no-blur) saturate($saturation);
+  filter: grayscale($grayscale) blur($no-blur) saturate($saturation);
 
-        -webkit-transition:all 0.3s;
-        -moz-transition:all 0.3s;
-        -o-transition:all 0.3s;
-        transition:all 0.3s;
-    }
-    .desaturated:hover{
-        -webkit-filter: grayscale($color) blur($no-blur) saturate($saturation);
-        filter: grayscale($color) blur($no-blur) saturate($saturation);
-    }
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.desaturated:hover {
+  -webkit-filter: grayscale($color) blur($no-blur) saturate($saturation);
+  filter: grayscale($color) blur($no-blur) saturate($saturation);
+}
