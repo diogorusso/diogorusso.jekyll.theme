@@ -2,70 +2,46 @@
 <html lang="en">
   {% include head/_main.html %}
   <body>
-    {% include components/nav/nav.html %}
-    
-    {% if page.scripts contains 'isotope' %}
-      {% assign isIsotope=true %}
-    {% else %}
-      {% assign isIsotope=false %}
-    {% endif %}
-
-    {% if page.hasSidebar == true  %}
-      <div class="box sidebar">
-        {% include components/sidebar/sidebar.html 
-            isIsotope=isIsotope
-            title=page.title 
-            list=page.sidebar  
-        %}
-        <main class="main">
-            {{ content}}
-        </main>
-      </div>
-    {% else %}
-      <main>
+    {% include components/nav/nav-resp.html %} {% if page.scripts contains
+    'isotope' %} {% assign isIsotope=true %} {% else %} {% assign
+    isIsotope=false %} {% endif %} {% if page.hasSidebar == true %}
+    <div class="sidebar" {%- if page.boxSize != "" -%} style="max-width:{{page.boxSize}}; margin: 3rem auto 0;" {%- endif -%}>
+      {% include components/sidebar/sidebar.html isIsotope=isIsotope
+      title=page.title list=page.sidebar %}
+      <main class="main">
         {{ content}}
       </main>
-    {% endif %}
-    
-    {% include components/footer/footer.html %}
-	<style>
-		{% capture include_to_scssify %}
-		{% include main.scss %}
-		{% endcapture %}
-		{{ include_to_scssify | scssify }}
-	</style>  
-  <script src="{{ site.baseurl }}/assets/js/main.js" defer></script>
+    </div>
+    {% else %}
+    <main>
+      {{ content}}
+    </main>
+    {% endif %} {% include components/footer/footer.html %}
+    <style>
+      {% capture include_to_scssify %}
+      {% include main.scss %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}
+    </style>
+    <script src="{{ site.baseurl }}/assets/js/main.js" defer></script>
 
-  {% if page.scripts contains 'isotope' %}
+    {% if page.scripts contains 'isotope' %}
     <script src="{{ site.baseurl }}/assets/js/isotope.js" defer></script>
-  {% endif %}
-
-  {% if page.scripts contains 'colorFill' %}
+    {% endif %} {% if page.scripts contains 'colorFill' %}
     <script src="{{ site.baseurl }}/assets/js/colorFill.js" defer></script>
-  {% endif %}
-
-  {% if page.scripts contains 'hscroll' %}
+    {% endif %} {% if page.scripts contains 'hscroll' %}
     <script src="{{ site.baseurl }}/assets/js/hscroll.js" defer></script>
-  {% endif %}
-
-  {% if page.scripts contains 'about' %}
+    {% endif %} {% if page.scripts contains 'about' %}
     <script src="{{ site.baseurl }}/assets/js/about.js" defer></script>
-  {% endif %}
-  
-  {% if page.scripts contains 'instagram' %}
+    {% endif %} {% if page.scripts contains 'instagram' %}
     <script src="{{ site.baseurl }}/assets/js/instagram.js" defer></script>
-  {% endif %}
-  {% if page.scripts contains 'dribbble' %}
+    {% endif %} {% if page.scripts contains 'dribbble' %}
     <script src="{{ site.baseurl }}/assets/js/dribbble.js" defer></script>
-  {% endif %}
-  {% if page.scripts contains 'behance' %}
+    {% endif %} {% if page.scripts contains 'behance' %}
     <script src="{{ site.baseurl }}/assets/js/behance.js" defer></script>
-  {% endif %}
-  {% if page.scripts contains 'animation' %}
+    {% endif %} {% if page.scripts contains 'animation' %}
     <script src="{{ site.baseurl }}/assets/js/animation.js" defer></script>
-  {% endif %}
-  <script src="{{ site.baseurl }}/assets/js/ga.js" defer></script>
+    {% endif %}
+    <script src="{{ site.baseurl }}/assets/js/ga.js" defer></script>
   </body>
 </html>
-
-
