@@ -5,11 +5,10 @@
     </a>
     <div id="topnav">
       <ul>
-        <li><a {% if page.url == "/"  %} class="active"{% endif %} href="{{site.baseurl}}/">Home</a></li>
-        <li><a {% if page.title contains "About" %}class="active"{% endif %} href="{{site.baseurl}}/">About</a></li>
-        <li><a href="{{site.url}}/work/" aria-label="Work" {% if page.url contains "work" %}class="active"{% endif %}>Work</a></li>
+        <li><a {% if page.url == site.url  %} class="active"{% endif %} href="{{site.baseurl}}/">Hello</a></li>
+        <li><a href="{{site.baseurl}}/work/" aria-label="Work" {% if page.url contains "work" %}class="active"{% endif %}>Work</a></li>
         {%- comment -%} <li><a href="https://work.diogorusso.com" target="_blank" aria-label="Work" rel="noopener noreferrer">Work</a></li> {%- endcomment -%}
-        <li><a href="{{site.url}}/journal/" aria-label="Journal" {% if page.url contains "journal" %}class="active"{% endif %}>Journal</a></li>
+        <li><a href="{{site.baseurl}}/journal/" aria-label="Journal" {% if page.url contains "journal" %}class="active"{% endif %}>Journal</a></li>
         <li><a href="https://www.linkedin.com/in/diogorusso/?locale=en_US" target="_blank" rel="noopener" aria-label="Linkedin">{% include img/svg/social/linkedin-box.svg %}</a></li>
 
       </ul>
