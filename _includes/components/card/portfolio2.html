@@ -24,7 +24,16 @@
       </div>
       <div class="content" style="padding-top: 3rem; ">
         <h3 style="margin: 0;font-weight:400">{{ include.title }}</h3>
-        <p style="font-size: 1rem; margin: 1rem 0 3rem;">
+        <p
+          style="
+          font-size: 1rem; 
+          margin: 1rem 0 3rem;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;"
+        >
           {{ include.categories }}
         </p>
       </div>
