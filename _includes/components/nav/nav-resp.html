@@ -10,16 +10,19 @@
             class="active"
           {% endif %} 
           href="{{site.baseurl}}/">
-            Hello
+            About
         </a></li>
-        <li><a 
+        {%- comment -%} <li><a href="https://art.diogorusso.com" target="_blank" aria-label="Work" rel="noopener noreferrer">Art</a></li> {%- endcomment -%}
+        <li><a href="https://work.diogorusso.com" target="_blank" aria-label="Work" rel="noopener noreferrer">Work</a></li>
+        
+        {%- comment -%} <li><a 
           href="{{site.baseurl}}/work/" 
           aria-label="Work" 
           {% if page.url contains "work" %}
             class="active"
           {% endif %}>
           Work
-        </a></li>
+        </a></li> {%- endcomment -%}
         {%- comment -%} <li><a href="https://work.diogorusso.com" target="_blank" aria-label="Work" rel="noopener noreferrer">Work</a></li> {%- endcomment -%}
         <li><a href="{{site.baseurl}}/journal/" aria-label="Journal" {% if page.url contains "journal" %}class="active"{% endif %}>Journal</a></li>
         <li><a href="https://www.linkedin.com/in/diogorusso/?locale=en_US" target="_blank" rel="noopener" aria-label="Linkedin">{% include img/svg/social/linkedin-box.svg %}</a></li>
