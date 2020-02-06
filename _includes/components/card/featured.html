@@ -27,13 +27,13 @@
       </div>
       {%- endif -%}
 
-      <div class="content" style="margin-top:.25rem">
+      <div class="content" style="margin-top:.25rem; {{include.content_style}}">
         <small>{{include.categories}}</small>
         <h3
           style="
             font-size:1.25rem;
             font-weight:400; 
-            margin: 1.5rem 0 .5rem; 
+            margin: 1rem 0 .5rem; 
             overflow : hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
